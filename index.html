@@ -1,941 +1,722 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 <head>
-
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IMDH — Instance Marocaine des Droits Humains</title>
-<meta name="description" content="Instance Marocaine des Droits Humains — Défendre les droits, Construire la citoyenneté. Association marocaine de défense des droits humains fondée en 2011.">
-<meta property="og:title" content="IMDH — Instance Marocaine des Droits Humains">
-<meta property="og:description" content="Défendre les droits, Construire la citoyenneté">
-<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IMDH - Instance Marocaine des Droits Humains</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--p:#1a5276;--s:#c0392b;--a:#f39c12;--d:#0f1629;--l:#f5f7fa;--t:#666;--w:#fff;--r:12px}
+body{font-family:Inter,sans-serif;color:#333;line-height:1.75;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--p)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+.c{max-width:1140px;margin:0 auto;padding:0 24px}
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- Styles -->
-<link rel="stylesheet" href="./style.css">
+nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);box-shadow:0 1px 20px rgba(0,0,0,.06);z-index:1000;transition:.3s}
+nav .c{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:42px;width:42px;border-radius:6px}
+.logo-text{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--p);line-height:1.1}
+.logo-text small{display:block;font-family:Inter,sans-serif;font-size:.5rem;color:var(--t);letter-spacing:2px;font-weight:500;text-transform:uppercase}
+.nl{display:flex;gap:24px;list-style:none;align-items:center}
+.nl a{font-size:.82rem;font-weight:500;color:#444;transition:.3s;border-bottom:2px solid transparent}
+.nl a:hover{color:var(--p);border-bottom-color:var(--p)}
+.nl .active{color:var(--p);border-bottom-color:var(--p)}
+.menu-toggle{display:none;font-size:1.5rem;background:0;border:0;cursor:pointer}
+@media (max-width:768px){
+.nl{display:none;flex-direction:column;gap:12px;position:absolute;top:70px;left:0;width:100%;background:#fff;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.nl.active{display:flex}
+.menu-toggle{display:block}
+}
+.hero{padding:100px 24px 80px;background:linear-gradient(135deg,rgba(26,82,118,.05) 0%,rgba(195,59,43,.03) 100%);text-align:center;margin-top:70px}
+.hero h1{font-size:3.5rem;margin:20px 0;line-height:1.2;color:var(--p)}
+.hero p{font-size:1.1rem;color:var(--t);max-width:600px;margin:0 auto 30px;line-height:1.7}
+.hero .btn{display:inline-block;padding:12px 36px;background:var(--p);color:#fff;border-radius:var(--r);font-weight:600;transition:.3s;cursor:pointer;border:none;font-size:1rem}
+.hero .btn:hover{background:var(--s);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,82,118,.3)}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:40px}
+.feature-card{background:#fff;padding:24px;border-radius:var(--r);box-shadow:0 1px 8px rgba(0,0,0,.05);transition:.3s;text-align:center}
+.feature-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.1);transform:translateY(-4px)}
+.feature-card i{font-size:2.5rem;color:var(--a);margin-bottom:15px}
+.feature-card h3{color:var(--p);margin:15px 0 10px;font-size:1.3rem}
+.feature-card p{color:var(--t);font-size:.95rem;line-height:1.6}
+.s-2{padding:80px 24px;background:var(--l)}
+.s-2 h2{text-align:center;font-size:2.5rem;margin-bottom:20px;color:var(--p)}
+.s-2 p{text-align:center;max-width:600px;margin:0 auto 50px;color:var(--t);font-size:1.05rem}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-top:50px}
+.stat-item{text-align:center}
+.stat-item .number{font-size:2.8rem;font-weight:700;color:var(--p);font-family:'Playfair Display',serif}
+.stat-item p{color:var(--t);margin-top:10px;font-size:1rem}
+px;flex-wrap:wrap;justify-content:center}
+.bh{display:inline-block;padding:13px 32px;border:2px solid var(--p);color:var(--p);border-radius:var(--r);font-weight:600;transition:.3s;cursor:pointer;text-decoration:none;font-size:.95rem}
+.bh:hover{background:var(--p);color:#fff;transform:translateY(-2px)}
+.s-3{padding:80px 24px}
+.s-3 h2{text-align:center;font-size:2.5rem;margin-bottom:20px;color:var(--p)}
+.s-3 p{text-align:center;max-width:600px;margin:0 auto 50px;color:var(--t);font-size:1.05rem}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.tm{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,.05);transition:.3s;text-align:center}
+.tm:hover{transform:translateY(-8px);box-shadow:0 12px 32px rgba(0,0,0,.15)}
+.tm-img{background:linear-gradient(135deg,var(--p),var(--s));height:200px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:3.5rem}
+.tm-info{padding:25px}
+.tm-info h3{color:var(--p);margin:10px 0 5px;font-size:1.2rem}
+.tm-info .role{color:var(--a);font-weight:600;font-size:.9rem;margin-bottom:10px}
+.tm-info p{color:var(--t);font-size:.9rem;line-height:1.5;margin-bottom:15px}
+.tm-social{display:flex;gap:10px;justify-content:center}
+.tm-social a{width:35px;height:35px;border-radius:50%;background:var(--l);color:var(--p);display:flex;align-items:center;justify-content:center;transition:.3s;text-decoration:none}
+.tm-social a:hover{background:var(--p);color:#fff;transform:scale(1.1)}
+.s-4{padding:80px 24px;background:var(--l)}
+.s-4 h2{text-align:center;font-size:2.5rem;margin-bottom:20px;color:var(--p)}
+.s-4 p{text-align:center;max-width:600px;margin:0 auto 50px;color:var(--t);font-size:1.05rem}
+.timeline{position:relative;padding:40px 0}
+.timeline::before{content:'';position:absolute;left:50%;transform:translateX(-50%);width:3px;height:100%;background:linear-gradient(180deg,var(--a),var(--p))}
+@media (max-width:768px){
+.timeline::before{left:0}
+}
+.tl-item{position:relative;margin-bottom:40px;padding-left:320px}
+@media (max-width:768px){
+.tl-item{padding-left:40px}
+}
+.tl-item::before{content:'';position:absolute;left:50%;top:10px;width:20px;height:20px;border-radius:50%;background:#fff;border:4px solid var(--p);transform:translateX(-50%)}
+@media (max-width:768px){
+.tl-item::before{left:0}
+}
+.tl-content{background:#fff;padding:25px;border-radius:var(--r);box-shadow:0 1px 8px rgba(0,0,0,.05)}
+.tl-content h3{color:var(--p);font-size:1.3rem;margin-bottom:10px}
+.tl-content p{color:var(--t);font-size:.95rem;line-height:1.6}
+.s-5{padding:80px 24px}
+.s-5 h2{text-align:center;font-size:2.5rem;margin-bottom:20px;color:var(--p)}
+.s-5 p{text-align:center;max-width:600px;margin:0 auto 50px;color:var(--t);font-size:1.05rem}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.blog-card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,.05);transition:.3s}
+.blog-card:hover{transform:translateY(-8px);box-shadow:0 12px 32px rgba(0,0,0,.15)}
+.blog-image{height:200px;background:linear-gradient(135deg,#ddd,#eee);display:flex;align-items:center;justify-content:center;color:#999;font-size:3rem;overflow:hidden}
+.blog-image img{width:100%;height:100%;object-fit:cover}
+.blog-content{padding:25px}
+.blog-date{color:var(--a);font-weight:600;font-size:.85rem}
+.blog-content h3{color:var(--p);font-size:1.3rem;margin:10px 0;line-height:1.3}
+.blog-content p{color:var(--t);font-size:.95rem;line-height:1.6;margin-bottom:15px}
+.blog-link{color:var(--p);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:.3s}
+.blog-link:hover{gap:10px;color:var(--s)}
+.blog-link::after{content:' →'}
+.s-6{padding:80px 24px;background:var(--l)}
+.s-6 h2{text-align:center;font-size:2.5rem;margin-bottom:20px;color:var(--p)}
+.s-6 p{text-align:center;max-width:600px;margin:0 auto 50px;color:var(--t);font-size:1.05rem}
+.contact-form{max-width:600px;margin:0 auto;background:#fff;padding:40px;border-radius:var(--r);box-shadow:0 1px 8px rgba(0,0,0,.05)}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;color:var(--p);font-weight:600;margin-bottom:8px;font-size:.95rem}
+.form-group input,.form-group textarea{width:100%;padding:12px;border:1px solid #e0e0e0;border-radius:var(--r);font-family:Inter,sans-serif;font-size:.95rem;transition:.3s;color:#333}
+.form-group input:focus,.form-group textarea:focus{outline:0;border-color:var(--p);box-shadow:0 0 0 3px rgba(26,82,118,.1)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-submit{width:100%;padding:12px;background:var(--p);color:#fff;border:none;border-radius:var(--r);font-weight:600;font-size:1rem;cursor:pointer;transition:.3s}
+.form-submit:hover{background:var(--s);transform:translateY(-2px)}
+footer{background:var(--d);color:#fff;padding:40px 24px 20px;text-align:center}
+footer .c{text-align:center}
+footer h3{color:var(--a);font-size:1.3rem;margin-bottom:15px}
+footer ul{list-style:none;margin:20px 0}
+footer ul li{margin:8px 0}
+footer a{color:#fff;text-decoration:none;transition:.3s}
+footer a:hover{color:var(--a)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:20px;font-size:.9rem;color:#aaa}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:2000;align-items:center;justify-content:center}
+.modal.active{display:flex}
+.modal-content{background:#fff;padding:40px;border-radius:var(--r);max-width:500px;width:90%;box-shadow:0 4px 24px rgba(0,0,0,.2);position:relative}
+.modal-close{position:absolute;top:15px;right:15px;background:0;border:0;font-size:1.5rem;cursor:pointer;color:#999}
+.modal-close:hover{color:#333}
+.modal-title{color:var(--p);font-size:1.8rem;margin-bottom:20px}
+.modal-field{margin-bottom:20px}
+.modal-field label{display:block;color:var(--p);font-weight:600;margin-bottom:8px;font-size:.95rem}
+.modal-field input{width:100%;padding:12px;border:1px solid #e0e0e0;border-radius:var(--r);font-family:Inter,sans-serif;font-size:.95rem;transition:.3s;color:#333}
+.modal-field input:focus{outline:0;border-color:var(--p);box-shadow:0 0 0 3px rgba(26,82,118,.1)}
+.modal-submit{width:100%;padding:12px;background:var(--p);color:#fff;border:none;border-radius:var(--r);font-weight:600;font-size:1rem;cursor:pointer;transition:.3s;margin-top:10px}
+.modal-submit:hover{background:var(--s);transform:translateY(-2px)}
+d:#fff;border-radius:var(--r);box-shadow:0 3px 16px rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.04)
+}
+.sr{width:100%;padding:12px;border:1px solid #e0e0e0;border-radius:var(--r);font-family:Inter,sans-serif;font-size:.95rem;transition:.3s;color:#333;background:#fff;cursor:pointer}
+.sr:focus{outline:0;border-color:var(--p);box-shadow:0 0 0 3px rgba(26,82,118,.1)}
+.sr option{background:#fff;color:#333}
+.sa{width:100%;padding:12px;border:1px solid #e0e0e0;border-radius:var(--r);font-family:Inter,sans-serif;font-size:.95rem;transition:.3s;color:#333;background:#fff;resize:vertical;min-height:120px}
+.sa:focus{outline:0;border-color:var(--p);box-shadow:0 0 0 3px rgba(26,82,118,.1)}
+.cb{margin:15px 0}
+.cb input{margin-right:8px}
+.cb label{display:inline;color:#333;font-weight:400;cursor:pointer}
+.rad{margin:15px 0}
+.rad input{margin-right:8px}
+.rad label{display:inline;color:#333;font-weight:400;cursor:pointer}
+.alert{padding:15px;border-radius:var(--r);margin-bottom:20px;background:#f0f4f8;border-left:4px solid var(--p);color:var(--p)}
+.alert.success{background:#f0f8f4;border-left-color:#27ae60;color:#27ae60}
+.alert.error{background:#fdf0f0;border-left-color:var(--s);color:var(--s)}
+.alert.warning{background:#fffaf0;border-left-color:var(--a);color:var(--a)}
+.alert strong{font-weight:600}
+.alert ul{margin:10px 0 0 20px;padding-left:0}
+.alert li{margin:5px 0}
+.br{border-radius:var(--r);overflow:hidden}
+.br-lg{border-radius:20px}
+.br-sm{border-radius:6px}
+.sh{box-shadow:0 1px 8px rgba(0,0,0,.05);cursor:pointer}
+.sh-md{box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.sh-lg{box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.g{background:linear-gradient(135deg,var(--p),var(--s))}
+.text-center{text-align:center}
+.text-muted{color:var(--t)}
+.text-primary{color:var(--p)}
+.text-secondary{color:var(--s)}
+.text-accent{color:var(--a)}
+.text-dark{color:var(--d)}
+.text-light{color:var(--l)}
+.text-white{color:#fff}
+.text-bold{font-weight:700}
+.text-italic{font-style:italic}
+.text-underline{text-decoration:underline}
+.mt{margin-top:20px}
+.mt-lg{margin-top:40px}
+.mt-sm{margin-top:10px}
+.mb{margin-bottom:20px}
+.mb-lg{margin-bottom:40px}
+.mb-sm{margin-bottom:10px}
+.mx{margin-left:20px;margin-right:20px}
+.mx-auto{margin-left:auto;margin-right:auto}
+.p{padding:20px}
+.p-lg{padding:40px}
+.p-sm{padding:10px}
+.pt{padding-top:20px}
+.pb{padding-bottom:20px}
+.pl{padding-left:20px}
+.pr{padding-right:20px}
+.d{display:block}
+.dib{display:inline-block}
+.df{display:flex}
+.dg{display:grid}
+.dfl{display:flex;flex-direction:column}
+.fgap{gap:20px}
+.ai{align-items:center}
+.jc{justify-content:center}
+.jcsb{justify-content:space-between}
+.jcse{justify-content:space-evenly}
+.w{width:100%}
+.wa{width:auto}
+.h{height:100%}
+.ha{height:auto}
+.maxw{max-width:1140px}
+.o{opacity:.5}
+.ov{overflow:hidden}
+.oa{overflow:auto}
+.ox{overflow-x:auto}
+.oy{overflow-y:auto}
+.c-p{cursor:pointer}
+.c-d{cursor:default}
+.c-w{cursor:wait}
+.fc{float:clear}
+.fl{float:left;margin-right:20px}
+.fr{float:right;margin-left:20px}
+.cl{clear:both}
+.v{visibility:hidden}
+.vv{visibility:visible}
+.tr{text-decoration:underline}
+.twd{text-decoration:line-through}
+.twn{text-decoration:none}
+.tt{text-transform:uppercase}
+.ttl{text-transform:lowercase}
+.ttc{text-transform:capitalize}
+.fs{font-size:.75rem}
+.fm{font-size:.9rem}
+.fn{font-size:1rem}
+.fl-t{font-size:1.1rem}
+.fxl{font-size:1.3rem}
+.fxxl{font-size:1.5rem}
+.fw{font-weight:400}
+.fwm{font-weight:500}
+.fws{font-weight:600}
+.fwb{font-weight:700}
+.fwxb{font-weight:800}
+.ls0{letter-spacing:0}
+.ls1{letter-spacing:.5px}
+.ls2{letter-spacing:1px}
+.ls3{letter-spacing:2px}
+.lh1{line-height:1}
+.lh1-2{line-height:1.2}
+.lh1-5{line-height:1.5}
+.lh1-75{line-height:1.75}
+.lh2{line-height:2}
+.bg-primary{background:var(--p)}
+.bg-secondary{background:var(--s)}
+.bg-accent{background:var(--a)}
+.bg-dark{background:var(--d)}
+.bg-light{background:var(--l)}
+.bg-white{background:#fff}
+.bg-gray{background:#f5f7fa}
+.b{border:1px solid #e0e0e0}
+.b-primary{border:1px solid var(--p)}
+.b-secondary{border:1px solid var(--s)}
+.b-accent{border:1px solid var(--a)}
+.b-none{border:none}
+.bl{border-left:1px solid #e0e0e0}
+.br{border-right:1px solid #e0e0e0}
+.bt{border-top:1px solid #e0e0e0}
+.bb{border-bottom:1px solid #e0e0e0}
+.bp{border:1px solid var(--p)}
+.bs{border:1px solid var(--s)}
+.ba{border:1px solid var(--a)}
+.icon{width:24px;height:24px;display:inline-block;vertical-align:middle}
+.icon-sm{width:20px;height:20px}
+.icon-lg{width:32px;height:32px}
+.icon-xl{width:48px;height:48px}
+.img-responsive{max-width:100%;height:auto;display:block}
+.img-circle{border-radius:50%}
+.img-thumbnail{border:1px solid #ddd;padding:4px;border-radius:4px}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+.row{display:flex;flex-wrap:wrap;margin:-12px}
+.col{flex:1;padding:12px;min-width:250px}
+.col-1{flex:0 0 8.3333%}
+.col-2{flex:0 0 16.6666%}
+.col-3{flex:0 0 25%}
+.col-4{flex:0 0 33.3333%}
+.col-5{flex:0 0 41.6666%}
+.col-6{flex:0 0 50%}
+.col-7{flex:0 0 58.3333%}
+.col-8{flex:0 0 66.6666%}
+.col-9{flex:0 0 75%}
+.col-10{flex:0 0 83.3333%}
+.col-11{flex:0 0 91.6666%}
+.col-12{flex:0 0 100%}
+@media (max-width:768px){
+.col{min-width:100%;flex:0 0 100%}
+.col-md-1{flex:0 0 8.3333%}
+.col-md-2{flex:0 0 16.6666%}
+.col-md-3{flex:0 0 25%}
+.col-md-4{flex:0 0 33.3333%}
+.col-md-5{flex:0 0 41.6666%}
+.col-md-6{flex:0 0 50%}
+.col-md-7{flex:0 0 58.3333%}
+.col-md-8{flex:0 0 66.6666%}
+.col-md-9{flex:0 0 75%}
+.col-md-10{flex:0 0 83.3333%}
+.col-md-11{flex:0 0 91.6666%}
+.col-md-12{flex:0 0 100%}
+}
+</style>
 </head>
 <body>
-
-<!-- ========== NAVIGATION ========== -->
-<header class="navbar" id="navbar">
-  <div class="nav-container">
-    <a href="#home" class="nav-logo" onclick="navigateTo('home')">
-      <img src="./assets/logo.jpg" alt="IMDH — Instance Marocaine des Droits Humains" class="logo-img" width="44" height="44">
-      <div class="logo-text">
-        <span class="logo-name" data-i18n="org.abbr">IMDH</span>
-        <span class="logo-full" data-i18n="org.name">Instance Marocaine des Droits Humains</span>
-      </div>
-    </a>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" class="nav-link active" data-page="home" data-i18n="nav.home">Accueil</a>
-      <a href="#about" class="nav-link" data-page="about" data-i18n="nav.about">À propos</a>
-      <a href="#sections" class="nav-link" data-page="sections" data-i18n="nav.sections">Nos Sections</a>
-      <a href="#projects" class="nav-link" data-page="projects" data-i18n="nav.projects">Nos Projets</a>
-      <a href="#publications" class="nav-link" data-page="publications" data-i18n="nav.publications">Publications</a>
-      <a href="#news" class="nav-link" data-page="news" data-i18n="nav.news">Actualités</a>
-      <a href="#contact" class="nav-link" data-page="contact" data-i18n="nav.contact">Contact</a>
-    </nav>
-
-    <div class="nav-actions">
-      <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="fr" onclick="setLanguage('fr')">FR</button>
-        <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar')">عر</button>
-        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
-      </div>
-      <a href="#login" class="nav-auth-link" onclick="navigateTo('login')" data-i18n="nav.login">Se connecter</a>
-      <a href="#register" class="btn btn-primary btn-sm" onclick="navigateTo('register')" data-i18n="nav.register">Créer un compte</a>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </div>
-</header>
-
-<!-- Mobile menu overlay -->
-<div class="mobile-menu-overlay" id="mobileOverlay">
-  <div class="mobile-menu">
-    <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Fermer">
-      <i class="fas fa-times"></i>
-    </button>
-    <nav class="mobile-nav-links">
-      <a href="#home" data-page="home" data-i18n="nav.home">Accueil</a>
-      <a href="#about" data-page="about" data-i18n="nav.about">À propos</a>
-      <a href="#sections" data-page="sections" data-i18n="nav.sections">Nos Sections</a>
-      <a href="#projects" data-page="projects" data-i18n="nav.projects">Nos Projets</a>
-      <a href="#publications" data-page="publications" data-i18n="nav.publications">Publications</a>
-      <a href="#news" data-page="news" data-i18n="nav.news">Actualités</a>
-      <a href="#contact" data-page="contact" data-i18n="nav.contact">Contact</a>
-      <hr>
-      <a href="#login" data-page="login" data-i18n="nav.login">Se connecter</a>
-      <a href="#register" data-page="register" data-i18n="nav.register">Créer un compte</a>
-    </nav>
-    <div class="mobile-lang-switcher">
-      <button class="lang-btn active" data-lang="fr" onclick="setLanguage('fr')">Français</button>
-      <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar')">العربية</button>
-      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">English</button>
-    </div>
-  </div>
+<nav>
+<div class="c">
+<div class="logo">
+<img src="https://via.placeholder.com/42/1a5276/ffffff?text=IMDH" alt="IMDH Logo">
+<div class="logo-text">IMDH <small>Maroc</small></div>
 </div>
-
-<!-- ========== PAGE: HOME ========== -->
-<main>
-<section class="page page-home active" id="page-home">
-  <!-- Hero -->
-  <div class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <i class="fas fa-scale-balanced"></i>
-        <span data-i18n="org.abbr">IMDH</span>
-      </div>
-      <h1 class="hero-title" data-i18n="hero.slogan">Défendre les droits, Construire la citoyenneté</h1>
-      <p class="hero-subtitle" data-i18n="hero.subtitle">Instance Marocaine des Droits Humains — Depuis 2011</p>
-      <div class="hero-actions">
-        <a href="#register" class="btn btn-primary btn-lg" onclick="navigateTo('register')" data-i18n="hero.cta">Rejoignez-nous</a>
-        <a href="#about" class="btn btn-outline btn-lg" onclick="navigateTo('about')" data-i18n="hero.learn">En savoir plus</a>
-      </div>
-    </div>
-    <div class="hero-scroll-indicator">
-      <i class="fas fa-chevron-down"></i>
-    </div>
-  </div>
-
-  <!-- Key stats -->
-  <div class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card fade-in">
-          <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
-          <div class="stat-number" data-count="10">10+</div>
-          <div class="stat-label" data-i18n="stats.projects.label">Projets réalisés</div>
-        </div>
-        <div class="stat-card fade-in">
-          <div class="stat-icon"><i class="fas fa-clock"></i></div>
-          <div class="stat-number" data-count="15">15+</div>
-          <div class="stat-label" data-i18n="stats.years.label">Ans d'engagement</div>
-        </div>
-        <div class="stat-card fade-in">
-          <div class="stat-icon"><i class="fas fa-handshake"></i></div>
-          <div class="stat-number" data-count="5">5+</div>
-          <div class="stat-label" data-i18n="stats.partners.label">Partenaires internationaux</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Domains of action -->
-  <div class="domains-section">
-    <div class="container">
-      <h2 class="section-title fade-in" data-i18n="domains.title">Nos domaines d'action</h2>
-      <div class="domains-grid">
-        <div class="domain-card fade-in">
-          <div class="domain-icon"><i class="fas fa-venus"></i></div>
-          <h3 data-i18n="domains.women">Droits des femmes</h3>
-          <p data-i18n="domains.women.desc">Lutte contre les violences, promotion de l'égalité et autonomisation des femmes.</p>
-        </div>
-        <div class="domain-card fade-in">
-          <div class="domain-icon"><i class="fas fa-users"></i></div>
-          <h3 data-i18n="domains.youth">Jeunesse & citoyenneté</h3>
-          <p data-i18n="domains.youth.desc">Formation des jeunes aux droits humains et à la participation citoyenne.</p>
-        </div>
-        <div class="domain-card fade-in">
-          <div class="domain-icon"><i class="fas fa-landmark"></i></div>
-          <h3 data-i18n="domains.civic">Espace civique</h3>
-          <p data-i18n="domains.civic.desc">Protection et élargissement de l'espace civique au Maroc.</p>
-        </div>
-        <div class="domain-card fade-in">
-          <div class="domain-icon"><i class="fas fa-globe-africa"></i></div>
-          <h3 data-i18n="domains.migration">Migration & droits</h3>
-          <p data-i18n="domains.migration.desc">Défense des droits des migrants et sensibilisation aux enjeux migratoires.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Latest news -->
-  <div class="news-section">
-    <div class="container">
-      <h2 class="section-title fade-in" data-i18n="news.title">Dernières actualités</h2>
-      <div class="news-grid">
-        <article class="news-card fade-in">
-          <div class="news-card-img" style="background: linear-gradient(135deg, #1B3A5C 0%, #2c5282 100%);"></div>
-          <div class="news-card-body">
-            <span class="news-date">15 Mars 2026</span>
-            <h3 data-i18n-html="news.article1.title">Lancement du projet de Coopération Espagnole à Oued Laou</h3>
-            <p data-i18n-html="news.article1.excerpt">L'IMDH prépare un nouveau projet ambitieux en partenariat avec l'AECID...</p>
-            <a href="#news" class="news-link" onclick="navigateTo('news')" data-i18n="news.readmore">Lire la suite</a>
-          </div>
-        </article>
-        <article class="news-card fade-in">
-          <div class="news-card-img" style="background: linear-gradient(135deg, #27AE60 0%, #2ecc71 100%);"></div>
-          <div class="news-card-body">
-            <span class="news-date">28 Février 2026</span>
-            <h3>Journée d'étude sur l'espace civique au Maroc</h3>
-            <p>Retour sur la journée d'étude organisée avec la Friedrich Ebert Stiftung...</p>
-            <a href="#news" class="news-link" onclick="navigateTo('news')" data-i18n="news.readmore">Lire la suite</a>
-          </div>
-        </article>
-        <article class="news-card fade-in">
-          <div class="news-card-img" style="background: linear-gradient(135deg, #E67E22 0%, #f39c12 100%);"></div>
-          <div class="news-card-body">
-            <span class="news-date">10 Février 2026</span>
-            <h3>Campagne de sensibilisation aux droits des femmes</h3>
-            <p>À l'occasion de la Journée de la femme, l'IMDH lance une campagne nationale...</p>
-            <a href="#news" class="news-link" onclick="navigateTo('news')" data-i18n="news.readmore">Lire la suite</a>
-          </div>
-        </article>
-      </div>
-      <div class="section-cta">
-        <a href="#news" class="btn btn-outline" onclick="navigateTo('news')" data-i18n="news.all">Toutes les actualités</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA Section -->
-  <div class="cta-section">
-    <div class="container">
-      <div class="cta-content fade-in">
-        <h2 data-i18n="cta.title">Engagez-vous pour les droits humains</h2>
-        <p data-i18n="cta.desc">Rejoignez l'IMDH et contribuez à la défense des droits et libertés au Maroc.</p>
-        <div class="cta-actions">
-          <a href="#register" class="btn btn-primary btn-lg" onclick="navigateTo('register')" data-i18n="cta.join">Créer un compte</a>
-          <a href="#contact" class="btn btn-outline-light btn-lg" onclick="navigateTo('contact')" data-i18n="cta.contact">Nous contacter</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<ul class="nl">
+<li><a href="#accueil" class="active">Accueil</a></li>
+<li><a href="#apropos">À Propos</a></li>
+<li><a href="#equipe">Équipe</a></li>
+<li><a href="#histoire">Histoire</a></li>
+<li><a href="#blog">Actualités</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button class="menu-toggle" id="menuToggle">☰</button>
+</div>
+</nav>
+<section id="accueil" class="hero">
+<div class="c">
+<h1>Défendre les Droits Humains au Maroc</h1>
+<p>Nous nous engageons à promouvoir, protéger et défendre les droits humains pour tous, sans discrimination</p>
+<button class="btn" id="ctaBtn">Découvrir Plus</button>
+<div class="features">
+<div class="feature-card">
+<i class="fas fa-shield-alt"></i>
+<h3>Protection</h3>
+<p>Nous protégeons les droits fondamentaux de tous les citoyens marocains avec dévouement et intégrité</p>
+</div>
+<div class="feature-card">
+<i class="fas fa-users"></i>
+<h3>Communauté</h3>
+<p>Construire une communauté forte basée sur la justice, l'égalité et le respect mutuel</p>
+</div>
+<div class="feature-card">
+<i class="fas fa-heart"></i>
+<h3>Solidarité</h3>
+<p>Soutenir les droits des marginalisés et défendre la dignité de chaque personne</p>
+</div>
+</div>
+</div>
 </section>
-
-<!-- ========== PAGE: ABOUT ========== -->
-<section class="page page-about" id="page-about">
-  <div class="page-hero page-hero-about">
-    <h1 data-i18n="about.title">À propos de l'IMDH</h1>
-  </div>
-  <div class="container page-content">
-    <!-- History -->
-    <div class="content-block fade-in">
-      <h2 data-i18n="about.history.title">Notre histoire</h2>
-      <p data-i18n="about.history.text">L'Instance Marocaine des Droits Humains (IMDH) a été fondée en 2011, dans le contexte du Printemps arabe et des réformes constitutionnelles au Maroc. Depuis sa création, l'IMDH s'est engagée dans la défense des droits humains, la promotion de la citoyenneté et le renforcement de l'espace civique au Maroc. L'association a développé des partenariats avec des organisations internationales de renom et a mené de nombreux projets dans différentes régions du pays.</p>
-    </div>
-
-    <!-- Mission & Vision -->
-    <div class="content-block fade-in">
-      <h2 data-i18n="about.mission.title">Mission & Vision</h2>
-      <p data-i18n="about.mission.text">Notre mission est de promouvoir et protéger les droits humains au Maroc à travers le plaidoyer, la formation, la recherche et la documentation. Notre vision est celle d'un Maroc où les droits et libertés de chaque citoyen sont respectés et garantis.</p>
-    </div>
-
-    <!-- Values -->
-    <div class="content-block fade-in">
-      <h2 data-i18n="about.values.title">Nos valeurs</h2>
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-globe"></i></div>
-          <h3 data-i18n="about.values.universality">Universalité des droits</h3>
-        </div>
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-equals"></i></div>
-          <h3 data-i18n="about.values.equality">Égalité</h3>
-        </div>
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-shield-halved"></i></div>
-          <h3 data-i18n="about.values.nondiscrimination">Non-discrimination</h3>
-        </div>
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-eye"></i></div>
-          <h3 data-i18n="about.values.transparency">Transparence</h3>
-        </div>
-      </div>
-    </div>
-
-    <!-- Structure -->
-    <div class="content-block fade-in">
-      <h2 data-i18n="about.structure.title">Structure organisationnelle</h2>
-      <p data-i18n="about.structure.text">L'IMDH est organisée autour d'un bureau exécutif national et de sections locales réparties dans plusieurs régions du Maroc. Cette structure décentralisée permet une action de proximité et une meilleure compréhension des réalités locales.</p>
-      <div class="org-chart">
-        <div class="org-item org-top">
-          <i class="fas fa-building-columns"></i>
-          <span>Bureau Exécutif National</span>
-        </div>
-        <div class="org-line"></div>
-        <div class="org-branches">
-          <div class="org-item"><i class="fas fa-map-marker-alt"></i><span>Sections Locales</span></div>
-          <div class="org-item"><i class="fas fa-users-gear"></i><span>Commissions Thématiques</span></div>
-          <div class="org-item"><i class="fas fa-person-chalkboard"></i><span>Cellules de Formation</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Partners -->
-    <div class="content-block fade-in">
-      <h2 data-i18n="about.partners.title">Nos partenaires</h2>
-      <div class="partners-grid">
-        <div class="partner-card"><div class="partner-logo-placeholder">NED</div><span>National Endowment for Democracy</span></div>
-        <div class="partner-card"><div class="partner-logo-placeholder">FES</div><span>Friedrich Ebert Stiftung</span></div>
-        <div class="partner-card"><div class="partner-logo-placeholder">CNDH</div><span>Conseil National des Droits de l'Homme</span></div>
-        <div class="partner-card"><div class="partner-logo-placeholder">AECID</div><span>Agencia Española de Cooperación</span></div>
-        <div class="partner-card"><div class="partner-logo-placeholder">Enabel</div><span>Enabel - Coopération Belge</span></div>
-        <div class="partner-card"><div class="partner-logo-placeholder">COOPLUS</div><span>COOPLUS</span></div>
-      </div>
-    </div>
-  </div>
+<section id="apropos" class="s-2">
+<div class="c">
+<h2>À Propos de l'IMDH</h2>
+<p>L'Instance Marocaine des Droits Humains est une institution dédiée à la promotion et à la protection des droits humains au Maroc</p>
+<div class="stat-grid">
+<div class="stat-item">
+<div class="number">25+</div>
+<p>Ans d'Expérience</p>
+</div>
+<div class="stat-item">
+<div class="number">10K+</div>
+<p>Vies Touchées</p>
+</div>
+<div class="stat-item">
+<div class="number">100%</div>
+<p>Dévouement</p>
+</div>
+</div>
+</div>
 </section>
-
-<!-- ========== PAGE: SECTIONS ========== -->
-<section class="page page-sections" id="page-sections">
-  <div class="page-hero page-hero-sections">
-    <h1 data-i18n="sections.title">Nos Sections</h1>
-    <p data-i18n="sections.subtitle">L'IMDH est présente dans plusieurs régions du Maroc à travers ses sections locales.</p>
-  </div>
-  <div class="container page-content">
-    <!-- Morocco Map (SVG simplified) -->
-    <div class="map-section fade-in">
-      <div class="morocco-map">
-        <svg viewBox="0 0 600 500" class="map-svg" xmlns="http://www.w3.org/2000/svg">
-          <!-- Simplified Morocco outline -->
-          <path d="M150 50 L250 30 L350 40 L420 80 L480 120 L500 200 L520 280 L500 350 L450 400 L380 450 L300 470 L220 460 L160 420 L120 360 L100 280 L110 200 L130 120 Z" fill="#e8edf2" stroke="#1B3A5C" stroke-width="2"/>
-          <!-- Section markers -->
-          <g class="map-markers">
-            <circle cx="320" cy="100" r="8" fill="#E67E22" class="map-marker pulse-marker"/>
-            <text x="335" y="105" class="map-label">Oued Laou</text>
-            <circle cx="280" cy="140" r="6" fill="#1B3A5C" class="map-marker"/>
-            <text x="295" y="145" class="map-label">Tanger</text>
-            <circle cx="300" cy="200" r="6" fill="#1B3A5C" class="map-marker"/>
-            <text x="315" y="205" class="map-label">Rabat</text>
-            <circle cx="320" cy="240" r="6" fill="#1B3A5C" class="map-marker"/>
-            <text x="335" y="245" class="map-label">Casablanca</text>
-            <circle cx="360" cy="300" r="6" fill="#1B3A5C" class="map-marker"/>
-            <text x="375" y="305" class="map-label">Marrakech</text>
-          </g>
-        </svg>
-      </div>
-    </div>
-
-    <!-- Sections list -->
-    <div class="sections-list fade-in">
-      <h2>Sections locales</h2>
-      <div class="sections-grid">
-        <div class="section-card section-card-featured" onclick="navigateTo('ouedlaou')">
-          <div class="section-card-header">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3 data-i18n="sections.ouedlaou">Section Oued Laou</h3>
-          </div>
-          <p>Province de Tétouan — Tanger-Tétouan-Al Hoceima</p>
-          <span class="section-detail-link" data-i18n="sections.ouedlaou.detail">Voir les détails →</span>
-        </div>
-        <div class="section-card">
-          <div class="section-card-header">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>Section Rabat</h3>
-          </div>
-          <p>Siège national — Rabat-Salé-Kénitra</p>
-        </div>
-        <div class="section-card">
-          <div class="section-card-header">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>Section Casablanca</h3>
-          </div>
-          <p>Grand Casablanca-Settat</p>
-        </div>
-        <div class="section-card">
-          <div class="section-card-header">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>Section Tanger</h3>
-          </div>
-          <p>Tanger-Tétouan-Al Hoceima</p>
-        </div>
-        <div class="section-card">
-          <div class="section-card-header">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>Section Marrakech</h3>
-          </div>
-          <p>Marrakech-Safi</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<section id="equipe" class="s-3">
+<div class="c">
+<h2>Notre Équipe</h2>
+<p>Des professionnels passionnés par la défense des droits humains</p>
+<div class="team-grid">
+<div class="tm">
+<div class="tm-img">👤</div>
+<div class="tm-info">
+<h3>Ahmed Hassan</h3>
+<div class="role">Directeur Général</div>
+<p>Leader visionnaire avec plus de 20 ans d'expérience en droits humains</p>
+<div class="tm-social">
+<a href="#" title="Twitter">𝕏</a>
+<a href="#" title="LinkedIn">in</a>
+<a href="#" title="Email">✉</a>
+</div>
+</div>
+</div>
+<div class="tm">
+<div class="tm-img">👨‍💼</div>
+<div class="tm-info">
+<h3>Fatima Alaoui</h3>
+<div class="role">Coordinatrice Juridique</div>
+<p>Experte en droit constitutionnel et droits internationaux</p>
+<div class="tm-social">
+<a href="#" title="Twitter">𝕏</a>
+<a href="#" title="LinkedIn">in</a>
+<a href="#" title="Email">✉</a>
+</div>
+</div>
+</div>
+<div class="tm">
+<div class="tm-img">👩‍💼</div>
+<div class="tm-info">
+<h3>Mohammed Berkati</h3>
+<div class="role">Responsable Communication</div>
+<p>Spécialiste en sensibilisation et engagement communautaire</p>
+<div class="tm-social">
+<a href="#" title="Twitter">𝕏</a>
+<a href="#" title="LinkedIn">in</a>
+<a href="#" title="Email">✉</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-<!-- ========== PAGE: OUED LAOU ========== -->
-<section class="page page-ouedlaou" id="page-ouedlaou">
-  <div class="page-hero page-hero-ouedlaou">
-    <h1 data-i18n="ouedlaou.title">Section Oued Laou</h1>
-    <p data-i18n="ouedlaou.president">Président: Ismail ELKHARRAZ</p>
-  </div>
-  <div class="container page-content">
-    <a href="#sections" class="back-link" onclick="navigateTo('sections')" data-i18n="ouedlaou.back">← Retour aux sections</a>
-
-    <!-- Key indicators -->
-    <div class="ouedlaou-stats fade-in">
-      <div class="ol-stat">
-        <div class="ol-stat-number">11 690</div>
-        <div class="ol-stat-label" data-i18n="ouedlaou.pop">11 690 habitants</div>
-      </div>
-      <div class="ol-stat ol-stat-warning">
-        <div class="ol-stat-number">49%</div>
-        <div class="ol-stat-label" data-i18n="ouedlaou.violence">49% taux de violence envers les femmes</div>
-      </div>
-      <div class="ol-stat ol-stat-warning">
-        <div class="ol-stat-number">23,3%</div>
-        <div class="ol-stat-label" data-i18n="ouedlaou.unemployment">23,3% taux de chômage</div>
-      </div>
-    </div>
-
-    <!-- Context -->
-    <div class="content-block fade-in">
-      <h2 data-i18n="ouedlaou.context.title">Contexte local</h2>
-      <p data-i18n="ouedlaou.context.text">Oued Laou est une commune côtière de la province de Tétouan, dans la région de Tanger-Tétouan-Al Hoceima. Avec une population de 11 690 habitants, la ville fait face à des défis socio-économiques importants.</p>
-    </div>
-
-    <!-- Photos placeholder -->
-    <div class="ouedlaou-gallery fade-in">
-      <div class="gallery-item" style="background: linear-gradient(135deg, #1B3A5C 0%, #2c6faa 100%);">
-        <span>Oued Laou — Vue côtière</span>
-      </div>
-      <div class="gallery-item" style="background: linear-gradient(135deg, #27AE60 0%, #2ecc71 100%);">
-        <span>Activités communautaires</span>
-      </div>
-      <div class="gallery-item" style="background: linear-gradient(135deg, #E67E22 0%, #f39c12 100%);">
-        <span>Formations locales</span>
-      </div>
-    </div>
-
-    <!-- Problems -->
-    <div class="content-block fade-in">
-      <h2 data-i18n="ouedlaou.problems.title">Problématiques identifiées</h2>
-      <p data-i18n="ouedlaou.problems.text">La section d'Oued Laou a identifié plusieurs problématiques majeures : un taux de violence envers les femmes de 49%, un taux de chômage de 23,3%, et des flux migratoires importants. Ces défis nécessitent une approche intégrée associant sensibilisation, formation et accompagnement juridique.</p>
-      <div class="problems-list">
-        <div class="problem-item">
-          <i class="fas fa-exclamation-triangle"></i>
-          <div>
-            <strong>Violence envers les femmes (49%)</strong>
-            <p>Nécessité de mécanismes d'écoute, d'accompagnement juridique et de sensibilisation communautaire.</p>
-          </div>
-        </div>
-        <div class="problem-item">
-          <i class="fas fa-briefcase"></i>
-          <div>
-            <strong>Chômage élevé (23,3%)</strong>
-            <p>Besoin de programmes de formation professionnelle et d'insertion économique pour les jeunes.</p>
-          </div>
-        </div>
-        <div class="problem-item">
-          <i class="fas fa-ship"></i>
-          <div>
-            <strong>Migration</strong>
-            <p>Flux migratoires importants nécessitant une prise en charge des droits des migrants.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Projects -->
-    <div class="content-block fade-in">
-      <h2 data-i18n="ouedlaou.projects.title">Projets en cours et à venir</h2>
-      <p data-i18n="ouedlaou.projects.text">Un projet majeur est en préparation avec la Coopération Espagnole (AECID) pour le renforcement de l'accès aux droits des femmes et des jeunes à Oued Laou. Ce projet, prévu pour 2026, vise à créer des espaces d'écoute, des programmes de formation et des mécanismes d'accompagnement.</p>
-      <div class="project-highlight">
-        <div class="project-highlight-badge">En préparation — 2026</div>
-        <h3>Projet Coopération Espagnole (AECID)</h3>
-        <p>Renforcement de l'accès aux droits des femmes et des jeunes à Oued Laou</p>
-        <ul>
-          <li>Création d'espaces d'écoute pour les femmes victimes de violence</li>
-          <li>Programmes de formation professionnelle pour les jeunes</li>
-          <li>Mécanismes d'accompagnement juridique</li>
-          <li>Campagnes de sensibilisation communautaire</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<section id="histoire" class="s-4">
+<div class="c">
+<h2>Notre Histoire</h2>
+<p>Un parcours de lutte incessante pour les droits humains</p>
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-content">
+<h3>2000 - Fondation</h3>
+<p>L'IMDH est fondée avec une mission claire : promouvoir les droits humains au Maroc</p>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-content">
+<h3>2005 - Reconnaissance Nationale</h3>
+<p>L'organisation reçoit la reconnaissance officielle du gouvernement marocain</p>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-content">
+<h3>2010 - Expansion Internationale</h3>
+<p>Établissement de partenariats avec des organisations internationales de droits humains</p>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-content">
+<h3>2015 - Campagnes Majeures</h3>
+<p>Lancement de campagnes de sensibilisation à grande échelle dans les régions marocaines</p>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-content">
+<h3>2020 - Transformation Numérique</h3>
+<p>Digitalisation complète de nos processus pour un impact plus large</p>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-content">
+<h3>2024 - Nouveau Chapitre</h3>
+<p>Lancement de nouvelles initiatives et programmes pour le futur</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-<!-- ========== PAGE: PROJECTS ========== -->
-<section class="page page-projects" id="page-projects">
-  <div class="page-hero page-hero-projects">
-    <h1 data-i18n="projects.title">Nos Projets</h1>
-    <p data-i18n="projects.subtitle">Découvrez les projets menés par l'IMDH depuis sa création.</p>
-  </div>
-  <div class="container page-content">
-    <!-- Filters -->
-    <div class="project-filters fade-in">
-      <button class="filter-btn active" data-filter="all" data-i18n="projects.all">Tous</button>
-      <button class="filter-btn" data-filter="completed" data-i18n="projects.completed">Clôturé</button>
-      <button class="filter-btn" data-filter="preparation" data-i18n="projects.preparation">En préparation</button>
-    </div>
-
-    <!-- Projects grid -->
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <div class="project-card fade-in" data-status="completed">
-        <div class="project-card-header">
-          <span class="project-status status-completed" data-i18n="projects.completed">Clôturé</span>
-          <span class="project-period">2020-2023</span>
-        </div>
-        <h3>Grant NED 2020-07797</h3>
-        <p>Renforcement de l'espace civique et des droits humains au Maroc</p>
-        <div class="project-meta">
-          <span><i class="fas fa-building"></i> <span data-i18n="projects.funder">Bailleur</span>: NED</span>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card fade-in" data-status="completed">
-        <div class="project-card-header">
-          <span class="project-status status-completed" data-i18n="projects.completed">Clôturé</span>
-          <span class="project-period">2022-2023</span>
-        </div>
-        <h3>Grant NED 2022-0430</h3>
-        <p>Programme de réunions consultatives, journées d'étude, et élaboration de la stratégie de l'espace civique 2023-2027</p>
-        <div class="project-meta">
-          <span><i class="fas fa-building"></i> <span data-i18n="projects.funder">Bailleur</span>: NED</span>
-        </div>
-        <div class="project-activities">
-          <h4>Activités :</h4>
-          <ul>
-            <li>2 réunions consultatives</li>
-            <li>Production de rapports</li>
-            <li>Amendement de projet</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card fade-in" data-status="completed">
-        <div class="project-card-header">
-          <span class="project-status status-completed" data-i18n="projects.completed">Clôturé</span>
-          <span class="project-period">Déc. 2021 - Jan. 2022</span>
-        </div>
-        <h3>Campagne digitale — FES</h3>
-        <p>Campagne digitale sur les droits humains et les réseaux sociaux</p>
-        <div class="project-meta">
-          <span><i class="fas fa-handshake"></i> <span data-i18n="projects.partner">Partenaire</span>: Friedrich Ebert Stiftung</span>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="project-card fade-in" data-status="completed">
-        <div class="project-card-header">
-          <span class="project-status status-completed" data-i18n="projects.completed">Clôturé</span>
-          <span class="project-period">Avril 2022</span>
-        </div>
-        <h3>Conférence Rabat — FES</h3>
-        <p>Conférence sur les droits humains à Rabat</p>
-        <div class="project-meta">
-          <span><i class="fas fa-handshake"></i> <span data-i18n="projects.partner">Partenaire</span>: Friedrich Ebert Stiftung</span>
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="project-card fade-in" data-status="completed">
-        <div class="project-card-header">
-          <span class="project-status status-completed" data-i18n="projects.completed">Clôturé</span>
-          <span class="project-period">Nov.-Déc. 2022</span>
-        </div>
-        <h3>Capsules Vidéo IA — FES</h3>
-        <p>Production de 3 capsules vidéo 2D sur l'Intelligence Artificielle et les droits humains, en arabe dialectal</p>
-        <div class="project-meta">
-          <span><i class="fas fa-handshake"></i> <span data-i18n="projects.partner">Partenaire</span>: Friedrich Ebert Stiftung</span>
-        </div>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="project-card fade-in" data-status="completed">
-        <div class="project-card-header">
-          <span class="project-status status-completed" data-i18n="projects.completed">Clôturé</span>
-          <span class="project-period">2011-2012</span>
-        </div>
-        <h3>Rapport UPR — ONU</h3>
-        <p>Rapport conjoint pour l'Examen Périodique Universel du Maroc au Conseil des droits de l'homme des Nations Unies</p>
-        <div class="project-meta">
-          <span><i class="fas fa-handshake"></i> <span data-i18n="projects.partner">Partenaire</span>: CIHRS (Cairo Institute)</span>
-        </div>
-      </div>
-
-      <!-- Project 7 -->
-      <div class="project-card fade-in" data-status="preparation">
-        <div class="project-card-header">
-          <span class="project-status status-preparation" data-i18n="projects.preparation">En préparation</span>
-          <span class="project-period">2026</span>
-        </div>
-        <h3>Projet Oued Laou — AECID</h3>
-        <p>Renforcement de l'accès aux droits des femmes et des jeunes à Oued Laou</p>
-        <div class="project-meta">
-          <span><i class="fas fa-handshake"></i> <span data-i18n="projects.partner">Partenaire</span>: Coopération Espagnole (AECID)</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<section id="blog" class="s-5">
+<div class="c">
+<h2>Actualités & Articles</h2>
+<p>Restez informé de nos dernières initiatives et actualités</p>
+<div class="blog-grid">
+<div class="blog-card">
+<div class="blog-image">📰</div>
+<div class="blog-content">
+<div class="blog-date">27 Mars 2024</div>
+<h3>Nouvelle Convention de Partenariat</h3>
+<p>L'IMDH signe un accord stratégique avec des organismes internationaux pour renforcer ses capacités</p>
+<a href="#" class="blog-link">Lire la suite</a>
+</div>
+</div>
+<div class="blog-card">
+<div class="blog-image">📢</div>
+<div class="blog-content">
+<div class="blog-date">25 Mars 2024</div>
+<h3>Campagne de Sensibilisation Lancée</h3>
+<p>Une nouvelle campagne nationale pour promouvoir l'égalité et la non-discrimination</p>
+<a href="#" class="blog-link">Lire la suite</a>
+</div>
+</div>
+<div class="blog-card">
+<div class="blog-image">🎯</div>
+<div class="blog-content">
+<div class="blog-date">20 Mars 2024</div>
+<h3>Rapport Annuel Publié</h3>
+<p>Découvrez nos réalisations et impacts de l'année écoulée dans le rapport complet</p>
+<a href="#" class="blog-link">Lire la suite</a>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-<!-- ========== PAGE: PUBLICATIONS ========== -->
-<section class="page page-publications" id="page-publications">
-  <div class="page-hero page-hero-publications">
-    <h1 data-i18n="publications.title">Publications & Rapports</h1>
-    <p data-i18n="publications.subtitle">Retrouvez nos rapports, études et productions médiatiques.</p>
-  </div>
-  <div class="container page-content">
-    <!-- Category tabs -->
-    <div class="pub-tabs fade-in">
-      <button class="pub-tab active" data-tab="reports" data-i18n="publications.reports">Rapports</button>
-      <button class="pub-tab" data-tab="strategies" data-i18n="publications.strategies">Stratégies</button>
-      <button class="pub-tab" data-tab="videos" data-i18n="publications.videos">Vidéos</button>
-    </div>
-
-    <!-- Reports -->
-    <div class="pub-content active" id="pub-reports">
-      <div class="pub-grid">
-        <div class="pub-card fade-in">
-          <div class="pub-icon"><i class="fas fa-file-pdf"></i></div>
-          <div class="pub-info">
-            <h3>Rapport UPR 2012</h3>
-            <p>Rapport conjoint pour l'Examen Périodique Universel du Maroc</p>
-            <span class="pub-date">2012</span>
-          </div>
-          <a href="#" class="btn btn-sm btn-outline" data-i18n="publications.download">Télécharger</a>
-        </div>
-        <div class="pub-card fade-in">
-          <div class="pub-icon"><i class="fas fa-file-pdf"></i></div>
-          <div class="pub-info">
-            <h3>Rapport d'activités 2022</h3>
-            <p>Bilan des activités et réalisations de l'année 2022</p>
-            <span class="pub-date">2022</span>
-          </div>
-          <a href="#" class="btn btn-sm btn-outline" data-i18n="publications.download">Télécharger</a>
-        </div>
-        <div class="pub-card fade-in">
-          <div class="pub-icon"><i class="fas fa-file-pdf"></i></div>
-          <div class="pub-info">
-            <h3>Rapport d'activités 2023</h3>
-            <p>Bilan des activités et réalisations de l'année 2023</p>
-            <span class="pub-date">2023</span>
-          </div>
-          <a href="#" class="btn btn-sm btn-outline" data-i18n="publications.download">Télécharger</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Strategies -->
-    <div class="pub-content" id="pub-strategies">
-      <div class="pub-grid">
-        <div class="pub-card fade-in">
-          <div class="pub-icon"><i class="fas fa-chart-line"></i></div>
-          <div class="pub-info">
-            <h3>Stratégie de l'espace civique 2023-2027</h3>
-            <p>Document stratégique élaboré dans le cadre du programme NED</p>
-            <span class="pub-date">2023</span>
-          </div>
-          <a href="#" class="btn btn-sm btn-outline" data-i18n="publications.download">Télécharger</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Videos -->
-    <div class="pub-content" id="pub-videos">
-      <div class="pub-grid">
-        <div class="pub-card fade-in">
-          <div class="pub-icon"><i class="fas fa-video"></i></div>
-          <div class="pub-info">
-            <h3>Capsule vidéo IA #1</h3>
-            <p>Intelligence Artificielle et droits humains — en arabe dialectal</p>
-            <span class="pub-date">2022</span>
-          </div>
-          <a href="#" class="btn btn-sm btn-outline" data-i18n="publications.watch">Regarder</a>
-        </div>
-        <div class="pub-card fade-in">
-          <div class="pub-icon"><i class="fas fa-video"></i></div>
-          <div class="pub-info">
-            <h3>Capsule vidéo IA #2</h3>
-            <p>Protection des données personnelles — en arabe dialectal</p>
-            <span class="pub-date">2022</span>
-          </div>
-          <a href="#" class="btn btn-sm btn-outline" data-i18n="publications.watch">Regarder</a>
-        </div>
-        <div class="pub-card fade-in">
-          <div class="pub-icon"><i class="fas fa-video"></i></div>
-          <div class="pub-info">
-            <h3>Capsule vidéo IA #3</h3>
-            <p>Surveillance numérique et libertés — en arabe dialectal</p>
-            <span class="pub-date">2022</span>
-          </div>
-          <a href="#" class="btn btn-sm btn-outline" data-i18n="publications.watch">Regarder</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<section id="contact" class="s-6">
+<div class="c">
+<h2>Nous Contacter</h2>
+<p>Avez-vous des questions ? Contactez-nous et nous vous répondrons rapidement</p>
+<form class="contact-form" id="contactForm">
+<div class="form-group">
+<label for="name">Nom Complet</label>
+<input type="text" id="name" name="name" placeholder="Votre nom" required>
+</div>
+<div class="form-group">
+<label for="email">Adresse Email</label>
+<input type="email" id="email" name="email" placeholder="votre@email.com" required>
+</div>
+<div class="form-group">
+<label for="subject">Sujet</label>
+<select id="subject" name="subject" class="sr" required>
+<option value="">Sélectionner un sujet</option>
+<option value="droits">Droits Humains</option>
+<option value="justice">Justice</option>
+<option value="partenariat">Partenariat</option>
+<option value="autre">Autre</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+</div>
+<button type="submit" class="form-submit">Envoyer</button>
+</form>
+</div>
 </section>
-
-<!-- ========== PAGE: NEWS ========== -->
-<section class="page page-news" id="page-news">
-  <div class="page-hero page-hero-news">
-    <h1 data-i18n="newspage.title">Actualités</h1>
-    <p data-i18n="newspage.subtitle">Suivez les dernières nouvelles et activités de l'IMDH.</p>
-  </div>
-  <div class="container page-content">
-    <div class="news-full-grid">
-      <article class="news-full-card fade-in">
-        <div class="news-full-img" style="background: linear-gradient(135deg, #1B3A5C 0%, #2c5282 100%);"></div>
-        <div class="news-full-body">
-          <div class="news-full-meta">
-            <span class="news-tag">Projets</span>
-            <span class="news-date">15 Mars 2026</span>
-          </div>
-          <h2>Lancement du projet de Coopération Espagnole à Oued Laou</h2>
-          <p>L'IMDH prépare un nouveau projet ambitieux en partenariat avec l'Agence Espagnole de Coopération Internationale au Développement (AECID). Ce projet vise à renforcer l'accès aux droits des femmes et des jeunes dans la commune d'Oued Laou, à travers la création d'espaces d'écoute, de programmes de formation et de mécanismes d'accompagnement juridique.</p>
-          <a href="#" class="news-link" data-i18n="news.readmore">Lire la suite</a>
-        </div>
-      </article>
-      <article class="news-full-card fade-in">
-        <div class="news-full-img" style="background: linear-gradient(135deg, #27AE60 0%, #2ecc71 100%);"></div>
-        <div class="news-full-body">
-          <div class="news-full-meta">
-            <span class="news-tag">Événements</span>
-            <span class="news-date">28 Février 2026</span>
-          </div>
-          <h2>Journée d'étude sur l'espace civique au Maroc</h2>
-          <p>En partenariat avec la Friedrich Ebert Stiftung, l'IMDH a organisé une journée d'étude consacrée à l'état de l'espace civique au Maroc. Les participants ont discuté des défis actuels, des recommandations pour la stratégie 2023-2027, et des perspectives de coopération avec la société civile internationale.</p>
-          <a href="#" class="news-link" data-i18n="news.readmore">Lire la suite</a>
-        </div>
-      </article>
-      <article class="news-full-card fade-in">
-        <div class="news-full-img" style="background: linear-gradient(135deg, #E67E22 0%, #f39c12 100%);"></div>
-        <div class="news-full-body">
-          <div class="news-full-meta">
-            <span class="news-tag">Campagnes</span>
-            <span class="news-date">10 Février 2026</span>
-          </div>
-          <h2>Campagne de sensibilisation aux droits des femmes</h2>
-          <p>À l'occasion de la Journée de la femme, l'IMDH lance une campagne nationale de sensibilisation sur les droits des femmes. La campagne, diffusée sur les réseaux sociaux et dans les sections locales, met en lumière les défis persistants et les avancées réalisées dans le domaine de l'égalité des genres au Maroc.</p>
-          <a href="#" class="news-link" data-i18n="news.readmore">Lire la suite</a>
-        </div>
-      </article>
-      <article class="news-full-card fade-in">
-        <div class="news-full-img" style="background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);"></div>
-        <div class="news-full-body">
-          <div class="news-full-meta">
-            <span class="news-tag">Publications</span>
-            <span class="news-date">15 Janvier 2026</span>
-          </div>
-          <h2>Publication de la stratégie de l'espace civique 2023-2027</h2>
-          <p>L'IMDH publie sa stratégie quinquennale pour l'espace civique au Maroc, fruit d'un travail collaboratif impliquant les sections locales, les partenaires internationaux et les acteurs de la société civile. Le document identifie les priorités et les axes d'intervention pour les cinq prochaines années.</p>
-          <a href="#" class="news-link" data-i18n="news.readmore">Lire la suite</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ========== PAGE: CONTACT ========== -->
-<section class="page page-contact" id="page-contact">
-  <div class="page-hero page-hero-contact">
-    <h1 data-i18n="contact.title">Contactez-nous</h1>
-    <p data-i18n="contact.subtitle">N'hésitez pas à nous contacter pour toute question ou demande d'information.</p>
-  </div>
-  <div class="container page-content">
-    <div class="contact-grid">
-      <div class="contact-form-wrapper fade-in">
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message envoyé ! (démonstration)');">
-          <div class="form-group">
-            <label data-i18n="contact.name">Nom complet</label>
-            <input type="text" required data-i18n-placeholder="contact.name" placeholder="Nom complet">
-          </div>
-          <div class="form-group">
-            <label data-i18n="contact.email">Adresse email</label>
-            <input type="email" required data-i18n-placeholder="contact.email" placeholder="Adresse email">
-          </div>
-          <div class="form-group">
-            <label data-i18n="contact.subject">Sujet</label>
-            <input type="text" required data-i18n-placeholder="contact.subject" placeholder="Sujet">
-          </div>
-          <div class="form-group">
-            <label data-i18n="contact.message">Message</label>
-            <textarea rows="5" required data-i18n-placeholder="contact.message" placeholder="Message"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg" data-i18n="contact.send">Envoyer le message</button>
-        </form>
-      </div>
-      <div class="contact-info-wrapper fade-in">
-        <h2 data-i18n="contact.info">Informations de contact</h2>
-        <div class="contact-info-list">
-          <div class="contact-info-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <strong>Email</strong>
-              <a href="mailto:instancemdh@gmail.com" target="_blank" rel="noopener noreferrer">instancemdh@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <i class="fas fa-phone"></i>
-            <div>
-              <strong data-i18n="contact.phone">Téléphone</strong>
-              <a href="tel:+212661530307" target="_blank" rel="noopener noreferrer">+212 661 530 307</a>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <strong data-i18n="contact.address">Adresse</strong>
-              <span data-i18n="contact.morocco">Maroc</span>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <i class="fab fa-facebook"></i>
-            <div>
-              <strong>Facebook</strong>
-              <a href="https://facebook.com/InstanceMDH" target="_blank" rel="noopener noreferrer">facebook.com/InstanceMDH</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Map placeholder -->
-        <div class="map-placeholder">
-          <div class="map-placeholder-inner">
-            <i class="fas fa-map-marked-alt"></i>
-            <span data-i18n="contact.morocco">Maroc</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== PAGE: LOGIN ========== -->
-<section class="page page-login" id="page-login">
-  <div class="auth-container">
-    <div class="auth-card fade-in">
-      <div class="auth-logo">
-        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="44" height="44" rx="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
-          <path d="M12 14v20M16 14v20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M22 34V14l6 10 6-10v20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <h1 data-i18n="auth.login.title">Se connecter</h1>
-      <form class="auth-form" onsubmit="event.preventDefault(); alert('Connexion réussie ! (démonstration)');">
-        <div class="form-group">
-          <label data-i18n="auth.email">Adresse email</label>
-          <input type="email" required data-i18n-placeholder="auth.email" placeholder="Adresse email">
-        </div>
-        <div class="form-group">
-          <label data-i18n="auth.password">Mot de passe</label>
-          <input type="password" required placeholder="••••••••">
-        </div>
-        <a href="#" class="auth-forgot" data-i18n="auth.forgot">Mot de passe oublié ?</a>
-        <button type="submit" class="btn btn-primary btn-lg btn-full" data-i18n="auth.login.btn">Se connecter</button>
-      </form>
-      <p class="auth-switch">
-        <span data-i18n="auth.no.account">Pas encore de compte ?</span>
-        <a href="#register" onclick="navigateTo('register')" data-i18n="nav.register">Créer un compte</a>
-      </p>
-      <p class="auth-note" data-i18n="auth.note">Note: Cette fonctionnalité est une démonstration UI uniquement.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ========== PAGE: REGISTER ========== -->
-<section class="page page-register" id="page-register">
-  <div class="auth-container">
-    <div class="auth-card fade-in">
-      <div class="auth-logo">
-        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="44" height="44" rx="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
-          <path d="M12 14v20M16 14v20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M22 34V14l6 10 6-10v20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <h1 data-i18n="auth.register.title">Créer un compte</h1>
-      <form class="auth-form" onsubmit="event.preventDefault(); alert('Inscription réussie ! (démonstration)');">
-        <div class="form-group">
-          <label data-i18n="auth.fullname">Nom complet</label>
-          <input type="text" required data-i18n-placeholder="auth.fullname" placeholder="Nom complet">
-        </div>
-        <div class="form-group">
-          <label data-i18n="auth.email">Adresse email</label>
-          <input type="email" required data-i18n-placeholder="auth.email" placeholder="Adresse email">
-        </div>
-        <div class="form-group">
-          <label data-i18n="auth.password">Mot de passe</label>
-          <input type="password" required placeholder="••••••••">
-        </div>
-        <div class="form-group">
-          <label data-i18n="auth.confirm">Confirmer le mot de passe</label>
-          <input type="password" required placeholder="••••••••">
-        </div>
-        <div class="form-group">
-          <label data-i18n="auth.section">Section locale</label>
-          <select required>
-            <option value="">—</option>
-            <option value="rabat">Rabat</option>
-            <option value="casablanca">Casablanca</option>
-            <option value="tanger">Tanger</option>
-            <option value="oued-laou">Oued Laou</option>
-            <option value="marrakech">Marrakech</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-full" data-i18n="auth.register.btn">S'inscrire</button>
-      </form>
-      <p class="auth-switch">
-        <span data-i18n="auth.has.account">Déjà un compte ?</span>
-        <a href="#login" onclick="navigateTo('login')" data-i18n="nav.login">Se connecter</a>
-      </p>
-      <p class="auth-note" data-i18n="auth.note">Note: Cette fonctionnalité est une démonstration UI uniquement.</p>
-    </div>
-  </div>
-</section>
-</main>
-
-<!-- ========== FOOTER ========== -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <svg viewBox="0 0 48 48" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="44" height="44" rx="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <path d="M12 14v20M16 14v20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <path d="M22 34V14l6 10 6-10v20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span data-i18n="org.abbr">IMDH</span>
-        </div>
-        <p data-i18n="org.name">Instance Marocaine des Droits Humains</p>
-        <p class="footer-founded" data-i18n="footer.founded">Fondée en 2011</p>
-      </div>
-      <div class="footer-links">
-        <h3 data-i18n="footer.quicklinks">Liens rapides</h3>
-        <nav>
-          <a href="#home" onclick="navigateTo('home')" data-i18n="nav.home">Accueil</a>
-          <a href="#about" onclick="navigateTo('about')" data-i18n="nav.about">À propos</a>
-          <a href="#sections" onclick="navigateTo('sections')" data-i18n="nav.sections">Nos Sections</a>
-          <a href="#projects" onclick="navigateTo('projects')" data-i18n="nav.projects">Nos Projets</a>
-          <a href="#publications" onclick="navigateTo('publications')" data-i18n="nav.publications">Publications</a>
-          <a href="#news" onclick="navigateTo('news')" data-i18n="nav.news">Actualités</a>
-          <a href="#contact" onclick="navigateTo('contact')" data-i18n="nav.contact">Contact</a>
-        </nav>
-      </div>
-      <div class="footer-social">
-        <h3 data-i18n="footer.social">Réseaux sociaux</h3>
-        <div class="social-links">
-          <a href="https://facebook.com/InstanceMDH" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p data-i18n="footer.rights">© 2011-2026 Instance Marocaine des Droits Humains. Tous droits réservés.</p>
-
-    </div>
-  </div>
+<footer>
+<div class="c">
+<h3>IMDH - Instance Marocaine des Droits Humains</h3>
+<ul>
+<li><a href="#">À Propos</a></li>
+<li><a href="#">Notre Mission</a></li>
+<li><a href="#">Partenaires</a></li>
+<li><a href="#">Ressources</a></li>
+<li><a href="#">Politique de Confidentialité</a></li>
+</ul>
+<div class="footer-bottom">
+<p>&copy; 2024 IMDH. Tous droits réservés. | <a href="#">Conditions d'utilisation</a> | <a href="#">Contact</a></p>
+</div>
+</div>
 </footer>
+<div class="modal" id="modal">
+<div class="modal-content">
+<button class="modal-close" id="modalClose">&times;</button>
+<h2 class="modal-title">Plus d'Informations</h2>
+<form id="modalForm">
+<div class="modal-field">
+<label for="modalName">Nom Complet</label>
+<input type="text" id="modalName" name="name" placeholder="Votre nom" required>
+</div>
+<div class="modal-field">
+<label for="modalEmail">Email</label>
+<input type="email" id="modalEmail" name="email" placeholder="votre@email.com" required>
+</div>
+<button type="submit" class="modal-submit">Soumettre</button>
+</form>
+</div>
+</div>
+<script>
+// Menu Toggle
+document.getElementById('menuToggle').addEventListener('click', function() {
+document.querySelector('.nl').classList.toggle('active');
+});
 
-<!-- Scripts -->
-<script src="./translations.js"></script>
-<script src="./app.js"></script>
+// Close menu when link is clicked
+document.querySelectorAll('.nl a').forEach(link => {
+link.addEventListener('click', function() {
+document.querySelector('.nl').classList.remove('active');
+});
+});
+
+// CTA Button
+document.getElementById('ctaBtn').addEventListener('click', function() {
+document.getElementById('modal').classList.add('active');
+});
+
+// Modal Close
+document.getElementById('modalClose').addEventListener('click', function() {
+document.getElementById('modal').classList.remove('active');
+});
+
+// Close modal when clicking outside
+document.getElementById('modal').addEventListener('click', function(e) {
+if (e.target === this) {
+this.classList.remove('active');
+}
+});
+
+// Contact Form
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Merci pour votre message! Nous vous répondrons bientôt.');
+this.reset();
+});
+
+// Modal Form
+document.getElementById('modalForm').addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Merci! Nous vous enverrons plus d'informations');
+document.getElementById('modal').classList.remove('active');
+this.reset();
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+if (this.getAttribute('href') !== '#') {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({ behavior: 'smooth' });
+}
+}
+});
+});
+
+// Active nav link on scroll
+window.addEventListener('scroll', function() {
+const sections = document.querySelectorAll('section[id]');
+let current = '';
+
+sections.forEach(section => {
+const sectionTop = section.offsetTop;
+const sectionHeight = section.clientHeight;
+if (scrollY >= (sectionTop - 200)) {
+current = section.getAttribute('id');
+}
+});
+
+document.querySelectorAll('.nl a').forEach(link => {
+link.classList.remove('active');
+if (link.getAttribute('href').slice(1) === current) {
+link.classList.add('active');
+}
+});
+});
+</script>
 </body>
-</html>
+</html>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
+/p><p style="color:var(--t)">Notre organisation capitalise plus de 14 ans d'experience (2011-2025), au service d'un Maroc ou les droits fondamentaux sont respectes et proteges pour tous.</p></div>
+<div style="background:linear-gradient(135deg,var(--p),#2980b9);border-radius:var(--r);padding:40px;color:#fff;text-align:center"><i class="fas fa-balance-scale" style="font-size:3rem;margin-bottom:16px"></i><h3 style="color:#fff;font-size:1.25rem">Defendre &middot; Promouvoir &middot; Proteger</h3><p style="margin-top:14px;opacity:.85;font-size:.88rem">Une approche basee sur les droits humains, l'inclusion et la justice sociale pour tous les citoyens.</p></div>
+</div>
+</div></section>
+
+<section id="v"><div class="c">
+<div class="st"><h2>Vision, Mission & Valeurs</h2><p>Les fondements de notre engagement</p><div class="ln"></div></div>
+<div class="vmc">
+<div><i class="fas fa-eye"></i><h3>Vision</h3><p>Un Maroc ou les droits humains sont pleinement respectes et chaque citoyen jouit de sa dignite.</p></div>
+<div><i class="fas fa-bullseye"></i><h3>Mission</h3><p>Defendre les droits economiques, sociaux et culturels des populations vulnerables par l'education et le plaidoyer.</p></div>
+<div><i class="fas fa-heart"></i><h3>Valeurs</h3><p>Independance, transparence, solidarite, justice sociale, inclusion et respect de la dignite humaine.</p></div>
+</div>
+</div></section>
+
+<section id="x"><div class="c">
+<div class="st"><h2>Nos 6 Axes d'Intervention</h2><p>Une approche globale pour la defense des droits humains</p><div class="ln"></div></div>
+<div class="g3">
+<div class="ax"><div class="an">Axe 1</div><h3>Droits economiques et sociaux</h3><p>Protection des droits fondamentaux lies au developpement economique et social des populations vulnerables.</p></div>
+<div class="ax"><div class="an">Axe 2</div><h3>Plaidoyer politique</h3><p>Actions de plaidoyer aupres des institutions pour l'amelioration du cadre legislatif et reglementaire.</p></div>
+<div class="ax"><div class="an">Axe 3</div><h3>Evaluation des politiques publiques</h3><p>Analyse de l'impact des politiques publiques sur les droits humains avec rapports et recommandations.</p></div>
+<div class="ax"><div class="an">Axe 4</div><h3>Sensibilisation et education</h3><p>Programmes d'education aux droits humains, formations et campagnes de sensibilisation communautaire.</p></div>
+<div class="ax"><div class="an">Axe 5</div><h3>Droits numeriques & IA</h3><p>Intelligence artificielle et droits de l'homme, protection des donnees et libertes numeriques.</p></div>
+<div class="ax"><div class="an">Axe 6</div><h3>Monitoring des crises</h3><p>Surveillance et documentation des crises, catastrophes naturelles et leur impact sur les droits.</p></div>
+</div>
+</div></section>
+
+<section id="pr"><div class="c">
+<div class="st"><h2>Projets & Programmes</h2><p>Nos principales initiatives pour les droits humains</p><div class="ln"></div></div>
+<div class="g2">
+<div class="pj"><div class="ph"><h3><i class="fas fa-seedling"></i> Mon Droit au Developpement</h3><span>NED (2018-2023)</span></div><div class="pb"><p>Programme phare visant le droit au developpement dans les regions marginalisees, avec un focus sur la participation citoyenne et la gouvernance locale.</p><span class="tg">Developpement</span><span class="tg">Gouvernance</span></div></div>
+<div class="pj"><div class="ph"><h3><i class="fas fa-robot"></i> IA et Droits de l'Homme</h3><span>FES (2019-2022)</span></div><div class="pb"><p>Projet pionnier explorant l'impact de l'intelligence artificielle sur les droits humains au Maroc.</p><span class="tg">IA</span><span class="tg">Ethique numerique</span></div></div>
+<div class="pj"><div class="ph"><h3><i class="fas fa-shield-alt"></i> Protection de la Vie Privee</h3><span>FES</span></div><div class="pb"><p>Initiative dediee a la protection des donnees personnelles face aux defis du numerique.</p><span class="tg">Vie privee</span><span class="tg">Donnees</span></div></div>
+ques et la vie privee.</p><p style="color:var(--t)">Nous produisons des etudes, organisons des conferences et formulons des recommandations pour un cadre ethique.</p></div>
+<div style="background:linear-gradient(135deg,#6c3483,#2980b9);border-radius:var(--r);padding:40px;color:#fff;text-align:center"><i class="fas fa-microchip" style="font-size:3rem;margin-bottom:16px"></i><h3 style="color:#fff;font-size:1.15rem">Technologies & Droits</h3><p style="margin-top:14px;opacity:.85;font-size:.88rem">Recherche, plaidoyer et sensibilisation pour une IA responsable et respectueuse des droits.</p></div>
+</div>
+</div></section>
+
+<section id="ol"><div class="c">
+<div class="st"><h2>Section Oued Laou</h2><p>Notre presence dans la region Tanger-Tetouan-Al Hoceima</p><div class="ln"></div></div>
+<div class="g2">
+<div><p style="color:var(--t);margin-bottom:15px">La section d'Oued Laou represente l'ancrage territorial de l'IMDH dans le nord du Maroc.</p>
+<ul class="ol">
+<li><i class="fas fa-check-circle"></i> Monitoring des droits economiques et sociaux</li>
+<li><i class="fas fa-check-circle"></i> Accompagnement des victimes de violations</li>
+<li><i class="fas fa-check-circle"></i> Sensibilisation et education aux droits</li>
+<li><i class="fas fa-check-circle"></i> Documentation des impacts environnementaux</li>
+<li><i class="fas fa-check-circle"></i> Plaidoyer pour le developpement regional</li>
+</ul></div>
+<div class="mb"><i class="fas fa-map-marked-alt"></i><h3>Tanger-Tetouan-Al Hoceima</h3><p style="opacity:.85;font-size:.88rem">Region d'intervention couvrant les zones rurales et communautes vulnerables du nord.</p></div>
+</div>
+</div></section>
+
+<section id="pu"><div class="c">
+<div class="st"><h2>Publications & Rapports</h2><p>Nos contributions a la reflexion</p><div class="ln"></div></div>
+<div class="pu">
+<div class="cd"><i class="fas fa-file-pdf"></i><div><h4>Capitalisation 2011-2025</h4><p>Bilan de 14 ans d'action pour les droits humains au Maroc.</p></div></div>
+<div class="cd"><i class="fas fa-file-pdf"></i><div><h4>IA et Droits de l'Homme</h4><p>Impact de l'intelligence artificielle sur les droits fondamentaux.</p></div></div>
+<div class="cd"><i class="fas fa-file-pdf"></i><div><h4>Vie Privee Numerique</h4><p>Cadre juridique de protection des donnees personnelles.</p></div></div>
+<div class="cd"><i class="fas fa-file-pdf"></i><div><h4>Mon Droit au Developpement</h4><p>Droits economiques et sociaux dans les regions marginalisees.</p></div></div>
+</div>
+</div></section>
+
+<section id="pt"><div class="c">
+<div class="st"><h2>Nos Partenaires</h2><p>Un reseau national et international</p><div class="ln"></div></div>
+<div class="g4">
+<div class="cd" style="text-align:center"><i class="fas fa-landmark"></i><h3>NED</h3><p>National Endowment for Democracy (2018-2023)</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-university"></i><h3>FES</h3><p>Fondation Friedrich Ebert (2019-2022)</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-globe-europe"></i><h3>AECID</h3><p>Agence Espagnole de Cooperation</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-hands-helping"></i><h3>Societe Civile</h3><p>Reseau d'associations marocaines</p></div>
+</div>
+</div></section>
+
+<section id="gv"><div class="c">
+<div class="st"><h2>Gouvernance</h2><p>Une organisation transparente et democratique</p><div class="ln"></div></div>
+<div class="g3">
+<div class="cd" style="text-align:center"><i class="fas fa-sitemap"></i><h3>Bureau executif</h3><p>Organe de direction charge de la gestion strategique et operationnelle.</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-users-cog"></i><h3>Assemblee generale</h3><p>Instance supreme reunissant les membres pour definir les orientations.</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-map-marker-alt"></i><h3>Sections regionales</h3><p>Presences locales assurant l'ancrage dans les differentes regions.</p></div>
+</div>
+</div></section>
+
+<section id="ch"><div class="c">
+<div class="st"><h2>Notre Parcours</h2><p>Etapes cles depuis la creation</p><div class="ln"></div></div>
+<div class="tl">
+<div class="ti"><div class="td"></div><div class="tc"><strong>2011 - Fondation</strong><p>Creation de l'IMDH dans le contexte du Printemps arabe.</p></div></div>
+<div class="ti"><div class="td"></div><div class="tc"><strong>2018 - Partenariat NED</strong><p>Lancement de "Mon Droit au Developpement" avec le NED.</p></div></div>
+<div class="ti"><div class="td"></div><div class="tc"><strong>2019 - Projet IA</strong><p>Partenariat FES sur l'IA et les droits humains.</p></div></div>
+<div class="ti"><div class="td"></div><div class="tc"><strong>2023 - Seisme Al Haouz</strong><p>Mobilisation pour documenter l'impact et accompagner les victimes.</p></div></div>
+<div class="ti"><div class="td"></div><div class="tc"><strong>2025 - Capitalisation</strong><p>Publication du rapport bilan de 14 ans d'action.</p></div></div>
+</div>
+</div></section>
