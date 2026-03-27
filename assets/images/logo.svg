@@ -1,17 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f4c75;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1b262c;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <circle cx="100" cy="100" r="95" fill="url(#bg)" stroke="#3282b8" stroke-width="2"/>
-  <!-- Human figure -->
-  <circle cx="100" cy="55" r="18" fill="#e74c3c"/>
-  <path d="M100 75 L100 120 M75 95 L125 95 M100 120 L75 155 M100 120 L125 155" stroke="#e74c3c" stroke-width="6" stroke-linecap="round" fill="none"/>
-  <!-- Hands reaching up -->
-  <path d="M60 140 C50 120 40 110 35 95" stroke="#bbe1fa" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <path d="M140 140 C150 120 160 110 165 95" stroke="#bbe1fa" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <!-- Text -->
-  <text x="100" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#bbe1fa">IMDH</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="240" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            @keyframes flicker {
+                0%, 100% {
+                    transform: scaleY(1);
+                    opacity: 0.9;
+                }
+                50% {
+                    transform: scaleY(0.95);
+                    opacity: 1;
+                }
+            }
+
+            .flame {
+                animation: flicker 3s ease-in-out infinite;
+                transform-origin: center bottom;
+            }
+
+            .flame-inner {
+                animation: flicker 2.5s ease-in-out infinite;
+                transform-origin: center bottom;
+            }
+
+            .text-label {
+                font-family: 'Playfair Display', serif;
+                font-size: 12px;
+                font-weight: 700;
+                fill: #c62828;
+                letter-spacing: 2px;
+            }
+        </style>
+    </defs>
+
+    <!-- Flame (Main outer shape) -->
+    <path class="flame" d="M50 15 Q35 35 35 50 Q35 65 50 75 Q65 65 65 50 Q65 35 50 15 Z" fill="#c62828"/>
+
+    <!-- Flame inner (Glow effect) -->
+    <path class="flame-inner" d="M50 25 Q42 35 42 48 Q42 58 50 65 Q58 58 58 48 Q58 35 50 25 Z" fill="#ff5252" opacity="0.8"/>
+
+    <!-- Highlight on flame -->
+    <ellipse cx="48" cy="35" rx="4" ry="8" fill="#ff8a80" opacity="0.6"/>
+
+    <!-- Candle body (Wax) -->
+    <rect x="40" y="72" width="20" height="25" fill="#f5deb3" stroke="#d4af37" stroke-width="0.5"/>
+
+    <!-- Candle top ring -->
+    <ellipse cx="50" cy="72" rx="10" ry="3" fill="#e8d4a8" stroke="#d4af37" stroke-width="0.5"/>
+
+    <!-- Candle drip (Melted wax) -->
+    <ellipse cx="50" cy="97" rx="12" ry="8" fill="#f5deb3" opacity="0.6"/>
+
+    <!-- Additional small drips -->
+    <ellipse cx="40" cy="95" rx="3" ry="5" fill="#f5deb3" opacity="0.4"/>
+    <ellipse cx="60" cy="96" rx="3" ry="5" fill="#f5deb3" opacity="0.4"/>
+
+    <!-- IMDH Text Label -->
+    <text x="50" y="115" text-anchor="middle" class="text-label">IMDH</text>
 </svg>
