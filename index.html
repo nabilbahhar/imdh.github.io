@@ -1,349 +1,265 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMDH - Instance Marocaine des Droits Humains</title>
-    <meta name="description" content="L'Instance Marocaine des Droits Humains (IMDH) - DÃÂ©fense et promotion des droits humains au Maroc depuis 2011">
-    <link rel="icon" href="assets/images/logo.svg" type="image/png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IMDH - Instance Marocaine des Droits Humains</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}:root{--p:#1a5276;--s:#c0392b;--a:#f39c12;--d:#1a1a2e;--l:#f8f9fa;--t:#555}body{font-family:Inter,sans-serif;color:#333;line-height:1.7}h1,h2,h3{font-family:'Playfair Display',serif;color:var(--p)}a{text-decoration:none;color:inherit}.c{max-width:1140px;margin:0 auto;padding:0 20px}
+nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,.97);box-shadow:0 2px 15px rgba(0,0,0,.08);z-index:1000}nav .c{display:flex;align-items:center;justify-content:space-between;height:65px}.logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--p)}.logo small{display:block;font-family:Inter,sans-serif;font-size:.55rem;color:var(--t);letter-spacing:1.5px;font-weight:400}.nl{display:flex;gap:20px;list-style:none;align-items:center}.nl a{font-size:.85rem;font-weight:500;color:#333}.nl a:hover{color:var(--s)}.bm{background:var(--p);color:#fff!important;padding:7px 18px;border-radius:20px;font-size:.8rem}.bm:hover{background:var(--s)}.hb{display:none;cursor:pointer;font-size:1.3rem;color:var(--p)}
+.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,var(--d),var(--p),#2c3e50);color:#fff;padding-top:65px;text-align:center}.hero h1{font-size:2.8rem;margin-bottom:18px;color:#fff;line-height:1.2}.hero p{font-size:1.1rem;opacity:.9;max-width:650px;margin:0 auto 25px}.bh{display:inline-block;padding:12px 30px;border-radius:25px;font-weight:600;margin:5px;transition:.3s}.bg{background:var(--s);color:#fff}.bo{border:2px solid #fff;color:#fff}.bh:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,.3)}.hs{display:flex;justify-content:center;gap:40px;margin-top:35px;flex-wrap:wrap}.sn{font-size:2.2rem;font-weight:700;color:var(--a)}.sl{font-size:.8rem;opacity:.8;margin-top:3px}
+section{padding:70px 0}section:nth-child(even){background:var(--l)}.st{text-align:center;margin-bottom:40px}.st h2{font-size:2rem;margin-bottom:8px}.st p{color:var(--t);max-width:550px;margin:0 auto}.st .ln{width:50px;height:3px;background:var(--s);margin:12px auto 0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.cd{background:#fff;border-radius:10px;padding:28px;box-shadow:0 3px 20px rgba(0,0,0,.05);transition:.3s}.cd:hover{transform:translateY(-3px)}.cd i{font-size:2rem;color:var(--s);margin-bottom:12px}.cd h3{font-size:1.05rem;margin-bottom:8px}.cd p{font-size:.85rem;color:var(--t)}
+.ax{background:#fff;border-radius:10px;padding:25px;border-left:4px solid var(--s);box-shadow:0 3px 15px rgba(0,0,0,.04);transition:.3s}.ax:hover{transform:translateY(-2px)}.an{font-size:.7rem;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}.ax h3{font-size:1rem;margin-bottom:6px}.ax p{font-size:.83rem;color:var(--t)}
+.pj{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 3px 20px rgba(0,0,0,.05)}.ph{padding:18px 22px;background:linear-gradient(135deg,var(--p),#2c3e50);color:#fff}.ph h3{color:#fff;font-size:1rem}.ph span{font-size:.75rem;opacity:.8}.pb{padding:18px 22px}.pb p{font-size:.85rem;color:var(--t);margin-bottom:8px}.tg{display:inline-block;background:var(--l);padding:2px 10px;border-radius:12px;font-size:.7rem;color:var(--p);margin:2px}
+.ol li{padding:8px 0;border-bottom:1px solid #eee;font-size:.9rem;display:flex;gap:10px;list-style:none}.ol i{color:var(--s);margin-top:4px;flex-shrink:0}
+.mb{background:linear-gradient(135deg,#2193b0,#6dd5ed);border-radius:12px;padding:35px;color:#fff;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:300px}.mb i{font-size:3.5rem;margin-bottom:12px}.mb h3{color:#fff;font-size:1.2rem;margin-bottom:8px}
+.pi{display:flex;gap:12px;padding:18px;background:#fff;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.04)}.pi i{font-size:1.3rem;color:var(--p);flex-shrink:0;margin-top:2px}.pi h4{font-size:.95rem;margin-bottom:4px}.pi p{font-size:.82rem;color:var(--t)}
+.mx{background:linear-gradient(135deg,var(--s),#e74c3c);border-radius:12px;padding:30px;color:#fff}.mx h3{color:#fff;margin-bottom:12px;font-size:1.2rem}.mx ul{list-style:none}.mx li{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.2);font-size:.85rem}.mx li i{margin-right:6px}
+.tl{max-width:650px;margin:0 auto;position:relative}.tl::before{content:'';position:absolute;left:18px;top:0;bottom:0;width:2px;background:var(--s)}.ti{display:flex;gap:18px;margin-bottom:20px}.td{width:10px;height:10px;background:var(--s);border-radius:50%;flex-shrink:0;margin-top:5px;position:relative;z-index:1;margin-left:13px}.tc{background:#fff;padding:14px 18px;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.04);flex:1}.tc strong{color:var(--p);display:block;margin-bottom:2px;font-size:.9rem}.tc p{font-size:.82rem;color:var(--t)}
+.pu{max-width:750px;margin:0 auto}.pu .cd{display:flex;gap:15px;margin-bottom:12px;text-align:left;align-items:center}.pu .cd i{flex-shrink:0;margin-bottom:0}.pu .cd h4{font-size:.95rem;margin-bottom:2px}
+.ci{display:flex;gap:12px;align-items:flex-start;margin-bottom:18px}.ci i{font-size:1.1rem;color:var(--s);margin-top:3px}.cf input,.cf textarea{width:100%;padding:10px 14px;border:1px solid #ddd;border-radius:6px;font-family:inherit;font-size:.85rem;margin-bottom:10px}.cf textarea{height:100px;resize:vertical}.bs{background:var(--p);color:#fff;padding:10px 25px;border:none;border-radius:20px;cursor:pointer;font-weight:600;font-size:.9rem}.bs:hover{background:var(--s)}
+.ms{background:linear-gradient(135deg,var(--d),var(--p));color:#fff;text-align:center}.ms h2{color:#fff}.lb{max-width:360px;margin:25px auto 0;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);border-radius:12px;padding:30px;border:1px solid rgba(255,255,255,.15)}.lb input{width:100%;padding:10px 14px;border:1px solid rgba(255,255,255,.3);border-radius:6px;background:rgba(255,255,255,.1);color:#fff;font-size:.85rem;margin-bottom:10px}.lb input::placeholder{color:rgba(255,255,255,.5)}.bl{width:100%;padding:10px;background:var(--s);color:#fff;border:none;border-radius:20px;cursor:pointer;font-weight:600;font-size:.9rem}.bl:hover{background:var(--a)}
+footer{background:var(--d);color:rgba(255,255,255,.6);padding:40px 0 15px}.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:25px;margin-bottom:25px}.fg h4{color:#fff;margin-bottom:12px;font-size:.9rem}.fg p,.fg a{font-size:.8rem;color:rgba(255,255,255,.5);display:block;margin-bottom:4px}.fg a:hover{color:var(--a)}.fb{text-align:center;padding-top:15px;border-top:1px solid rgba(255,255,255,.1);font-size:.75rem}.so{display:flex;gap:10px;margin-top:10px}.so a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem}.so a:hover{background:var(--s)}
+@media(max-width:900px){.nl{display:none;position:absolute;top:65px;left:0;width:100%;background:#fff;flex-direction:column;padding:15px;box-shadow:0 5px 15px rgba(0,0,0,.1)}.nl.on{display:flex}.hb{display:block}.hero h1{font-size:2rem}.g2,.g3,.g4{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr 1fr}}@media(max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}.hs{gap:20px}.sn{font-size:1.8rem}}
+</style>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/images/logo.svg" alt="IMDH Logo" class="nav-logo-img">
-                <div class="nav-logo-text">
-                    <span class="nav-logo-name">IMDH</span>
-                    <span class="nav-logo-sub">Instance Marocaine des Droits Humains</span>
-                </div>
-            </a>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link active">Accueil</a>
-                <a href="about.html" class="nav-link">Qui sommes-nous</a>
-                <a href="projects.html" class="nav-link">Projets</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-actions">
-                <a href="contact.html" class="btn btn-primary btn-sm">Nous contacter</a>
-                <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+<nav><div class="c">
+<a href="#" class="logo">IMDH<small>INSTANCE MAROCAINE DES DROITS HUMAINS</small></a>
+<div class="hb" onclick="document.getElementById('nm').classList.toggle('on')"><i class="fas fa-bars"></i></div>
+<ul class="nl" id="nm">
+<li><a href="#a">A propos</a></li>
+<li><a href="#x">Axes</a></li>
+<li><a href="#pr">Projets</a></li>
+<li><a href="#pt">Partenaires</a></li>
+<li><a href="#ct">Contact</a></li>
+<li><a href="#mb" class="bm"><i class="fas fa-lock"></i> Espace Membres</a></li>
+</ul>
+</div></nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-pattern"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-shield-halved"></i>
-                Depuis 2011 au service des droits humains
-            </div>
-            <h1 class="hero-title">
-                <span class="hero-title-ar">ÃÂ§ÃÂÃÂÃÂÃÂ¦ÃÂ© ÃÂ§ÃÂÃÂÃÂºÃÂ±ÃÂ¨ÃÂÃÂ© ÃÂÃÂ­ÃÂÃÂÃÂ ÃÂ§ÃÂÃÂ¥ÃÂÃÂ³ÃÂ§ÃÂ</span>
-                Instance Marocaine des<br>
-                <span class="gradient-text">Droits Humains</span>
-            </h1>
-            <p class="hero-desc">DÃÂ©fendre, promouvoir et protÃÂ©ger les droits humains au Maroc ÃÂ  travers le plaidoyer, la sensibilisation et le renforcement des capacitÃÂ©s de la sociÃÂ©tÃÂ© civile.</p>
-            <div class="hero-actions">
-                <a href="about.html" class="btn btn-primary btn-lg">
-                    DÃÂ©couvrir l'IMDH <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="projects.html" class="btn btn-outline btn-lg">
-                    Nos projets
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <span class="hero-stat-number" data-count="15">0</span>
-                    <span class="hero-stat-label">AnnÃÂ©es d'engagement</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-number" data-count="6">0</span>
-                    <span class="hero-stat-label">Projets majeurs rÃÂ©alisÃÂ©s</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-number" data-count="5">0</span>
-                    <span class="hero-stat-label">Partenaires internationaux</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-number" data-count="12">0</span>
-                    <span class="hero-stat-label">RÃÂ©gions couvertes</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero" id="h">
+<div class="c">
+<h1>Instance Marocaine<br>des Droits Humains</h1>
+<p>Depuis 2011, nous defendons, promouvons et protegeons les droits fondamentaux au Maroc a travers le plaidoyer, l'education, le monitoring et l'action locale.</p>
+<a href="#a" class="bh bg">Decouvrir l'IMDH</a>
+<a href="#ct" class="bh bo">Nous contacter</a>
+<div class="hs">
+<div><div class="sn">14+</div><div class="sl">Annees d'engagement</div></div>
+<div><div class="sn">6</div><div class="sl">Axes d'intervention</div></div>
+<div><div class="sn">50+</div><div class="sl">Projets realises</div></div>
+<div><div class="sn">5</div><div class="sl">Partenaires internationaux</div></div>
+</div>
+</div>
+</section>
 
-    <!-- MISSION -->
-    <section class="section" id="mission">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-bullseye"></i> Notre Mission</span>
-                <h2 class="section-title">DÃÂ©fendre les droits, <span class="gradient-text">construire l'avenir</span></h2>
-                <p class="section-desc">L'IMDH ÃÂuvre pour la dÃÂ©fense et la promotion des droits humains au Maroc, avec un focus particulier sur les droits ÃÂ©conomiques et sociaux des populations les plus vulnÃÂ©rables.</p>
-            </div>
-            <div class="grid grid-3">
-                <div class="card card-mission">
-                    <div class="card-icon"><i class="fas fa-scale-balanced"></i></div>
-                    <h3>Droits ÃÂconomiques & Sociaux</h3>
-                    <p>Suivi et ÃÂ©valuation de la mise en ÃÂuvre du Plan d'Action National en matiÃÂ¨re de droits ÃÂ©conomiques et sociaux. Plaidoyer pour le droit au dÃÂ©veloppement.</p>
-                </div>
-                <div class="card card-mission">
-                    <div class="card-icon"><i class="fas fa-users"></i></div>
-                    <h3>Renforcement de la SociÃÂ©tÃÂ© Civile</h3>
-                    <p>Formation, accompagnement et renforcement des capacitÃÂ©s des acteurs de la sociÃÂ©tÃÂ© civile pour une participation citoyenne effective.</p>
-                </div>
-                <div class="card card-mission">
-                    <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
-                    <h3>Plaidoyer & Sensibilisation</h3>
-                    <p>Campagnes de sensibilisation, capsules vidÃÂ©o, journÃÂ©es d'ÃÂ©tude et interpellation des institutions pour le respect des droits fondamentaux.</p>
-                </div>
-                <div class="card card-mission">
-                    <div class="card-icon"><i class="fas fa-female"></i></div>
-                    <h3>Droits des Femmes & Jeunes</h3>
-                    <p>Promotion de l'ÃÂ©galitÃÂ© des genres, accÃÂ¨s ÃÂ  l'emploi digne des jeunes et autonomisation ÃÂ©conomique des femmes en milieu rural.</p>
-                </div>
-                <div class="card card-mission">
-                    <div class="card-icon"><i class="fas fa-microchip"></i></div>
-                    <h3>Droits NumÃÂ©riques & IA</h3>
-                    <p>Sensibilisation aux enjeux de l'Intelligence Artificielle et protection de la vie privÃÂ©e ÃÂ  l'ÃÂ¨re digitale.</p>
-                </div>
-                <div class="card card-mission">
-                    <div class="card-icon"><i class="fas fa-earth-africa"></i></div>
-                    <h3>RÃÂ©silience Climatique</h3>
-                    <p>Monitoring des catastrophes naturelles, plaidoyer pour les zones sinistrÃÂ©es et dÃÂ©fense du droit ÃÂ  un environnement sain.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="a"><div class="c">
+<div class="st"><h2>A propos de l'IMDH</h2><p>Une organisation de la societe civile au service des droits humains</p><div class="ln"></div></div>
+<div class="g2">
+<div><p style="color:var(--t);margin-bottom:12px">L'Instance Marocaine des Droits Humains (IMDH) est une ONG fondee en 2011, dediee a la defense et a la promotion des droits humains au Maroc. Elle intervient sur l'ensemble du territoire avec une attention aux regions vulnerables.</p><p style="color:var(--t);margin-bottom:12px">L'IMDH adopte une approche basee sur les droits, combinant plaidoyer, education citoyenne, monitoring des crises et evaluation des politiques publiques pour ancrer une culture des droits humains.</p><p style="color:var(--t)">Notre organisation capitalise plus de 14 ans d'experience (2011-2025), au service d'un Maroc ou les droits fondamentaux sont respectes et proteges pour tous.</p></div>
+<div style="background:linear-gradient(135deg,var(--p),var(--s));border-radius:12px;padding:35px;color:#fff;text-align:center"><i class="fas fa-balance-scale" style="font-size:3.5rem;margin-bottom:15px"></i><h3 style="color:#fff;font-size:1.3rem">Defendre &middot; Promouvoir &middot; Proteger</h3><p style="margin-top:12px;opacity:.9;font-size:.9rem">Une approche basee sur les droits humains, l'inclusion et la justice sociale pour tous les citoyens.</p></div>
+</div>
+</div></section>
 
-    <!-- PARTNERS -->
-    <section class="section section-dark" id="partners">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-handshake"></i> Nos Partenaires</span>
-                <h2 class="section-title">Un rÃÂ©seau de <span class="gradient-text">confiance</span></h2>
-                <p class="section-desc">L'IMDH collabore avec des partenaires nationaux et internationaux de premier plan pour maximiser l'impact de ses actions.</p>
-            </div>
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-logo-placeholder"><span>NED</span></div>
-                    <h4>National Endowment for Democracy</h4>
-                    <p>Partenaire principal depuis 2018. Financement de projets de gouvernance dÃÂ©mocratique et droits ÃÂ©conomiques.</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo-placeholder"><span>FES</span></div>
-                    <h4>Friedrich-Ebert-Stiftung</h4>
-                    <p>Partenariat sur l'Intelligence Artificielle et les droits de l'Homme, et la protection de la vie privÃÂ©e.</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo-placeholder"><span>CNDH</span></div>
-                    <h4>Conseil National des Droits de l'Homme</h4>
-                    <p>Participation institutionnelle aux ÃÂ©vÃÂ©nements et journÃÂ©es d'ÃÂ©tude organisÃÂ©s par l'IMDH.</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo-placeholder"><span>AECID</span></div>
-                    <h4>CooperaciÃÂ³n EspaÃÂ±ola</h4>
-                    <p>Nouveau partenariat en cours d'exploration pour des projets dans la rÃÂ©gion Tanger-TÃÂ©touan-Al HoceÃÂ¯ma.</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo-placeholder"><span>MJ</span></div>
-                    <h4>MinistÃÂ¨re de la Justice</h4>
-                    <p>Collaboration sur les questions de droits humains et interlocuteur institutionnel.</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo-placeholder"><span>DIDH</span></div>
-                    <h4>DÃÂ©lÃÂ©gation InterministÃÂ©rielle aux DH</h4>
-                    <p>Partenaire institutionnel pour le suivi des politiques publiques en matiÃÂ¨re de droits humains.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="v"><div class="c">
+<div class="st"><h2>Vision, Mission & Valeurs</h2><p>Les fondements de notre engagement</p><div class="ln"></div></div>
+<div class="g3">
+<div class="cd" style="text-align:center"><i class="fas fa-eye"></i><h3>Vision</h3><p>Un Maroc ou les droits humains sont pleinement respectes, ou chaque citoyen jouit de sa dignite et participe a la vie democratique.</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-bullseye"></i><h3>Mission</h3><p>Defendre les droits economiques, sociaux et culturels des populations vulnerables. Promouvoir une culture des droits par l'education et le plaidoyer.</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-heart"></i><h3>Valeurs</h3><p>Independance, transparence, solidarite, justice sociale, inclusion, respect de la dignite humaine et engagement pour le bien commun.</p></div>
+</div>
+</div></section>
 
-    <!-- FEATURED PROJECT -->
-    <section class="section" id="featured-project">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-rocket"></i> Projet en cours</span>
-                <h2 class="section-title">Oued Laou : <span class="gradient-text">Droits & DÃÂ©veloppement</span></h2>
-            </div>
-            <div class="featured-project-card">
-                <div class="featured-project-content">
-                    <div class="project-status-badge">
-                        <i class="fas fa-circle-play"></i> En dÃÂ©veloppement
-                    </div>
-                    <h3>Renforcement des droits ÃÂ©conomiques et sociaux ÃÂ  Oued Laou</h3>
-                    <p>En partenariat avec la CooperaciÃÂ³n EspaÃÂ±ola (AECID), l'IMDH prÃÂ©pare un projet ambitieux pour la zone d'Oued Laou et ses villages environnants dans la rÃÂ©gion de Tanger-TÃÂ©touan-Al HoceÃÂ¯ma.</p>
-                    <div class="project-highlights">
-                        <div class="highlight">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Oued Laou, Province de TÃÂ©touan</span>
-                        </div>
-                        <div class="highlight">
-                            <i class="fas fa-users"></i>
-                            <span>Jeunes et femmes en milieu rural</span>
-                        </div>
-                        <div class="highlight">
-                            <i class="fas fa-flag"></i>
-                            <span>CoopÃÂ©ration Espagnole (AECID)</span>
-                        </div>
-                    </div>
-                    <a href="projects.html#oued-laou" class="btn btn-primary">
-                        En savoir plus <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="featured-project-visual">
-                    <div class="project-stats-visual">
-                        <div class="stat-circle">
-                            <div class="stat-circle-inner">
-                                <span class="stat-number">38%</span>
-                                <span class="stat-label">ChÃÂ´mage jeunes</span>
-                            </div>
-                        </div>
-                        <div class="stat-circle">
-                            <div class="stat-circle-inner">
-                                <span class="stat-number">72%</span>
-                                <span class="stat-label">PauvretÃÂ© rurale</span>
-                            </div>
-                        </div>
-                        <div class="stat-circle">
-                            <div class="stat-circle-inner">
-                                <span class="stat-number">15%</span>
-                                <span class="stat-label">Emploi femmes</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="x"><div class="c">
+<div class="st"><h2>Nos 6 Axes d'Intervention</h2><p>Une approche globale pour la defense des droits humains</p><div class="ln"></div></div>
+<div class="g3">
+<div class="ax"><div class="an">Axe 1</div><h3>Droits economiques et sociaux</h3><p>Protection des droits fondamentaux lies au developpement economique et social des populations vulnerables.</p></div>
+<div class="ax"><div class="an">Axe 2</div><h3>Plaidoyer politique</h3><p>Actions de plaidoyer aupres des institutions pour l'amelioration du cadre legislatif et reglementaire.</p></div>
+<div class="ax"><div class="an">Axe 3</div><h3>Evaluation des politiques publiques</h3><p>Analyse de l'impact des politiques publiques sur les droits humains avec rapports et recommandations.</p></div>
+<div class="ax"><div class="an">Axe 4</div><h3>Sensibilisation et education</h3><p>Programmes d'education aux droits humains, formations et campagnes de sensibilisation communautaire.</p></div>
+<div class="ax"><div class="an">Axe 5</div><h3>Droits numeriques & IA</h3><p>Intelligence artificielle et droits de l'homme, protection des donnees et libertes numeriques.</p></div>
+<div class="ax"><div class="an">Axe 6</div><h3>Monitoring des crises</h3><p>Surveillance et documentation des crises, catastrophes naturelles et leur impact sur les droits.</p></div>
+</div>
+</div></section>
 
-    <!-- TIMELINE -->
-    <section class="section section-dark" id="timeline">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-clock-rotate-left"></i> Notre Parcours</span>
-                <h2 class="section-title">15 ans d'<span class="gradient-text">engagement</span></h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2011</span>
-                        <h4>CrÃÂ©ation de l'IMDH</h4>
-                        <p>Fondation de l'Instance Marocaine des Droits Humains ÃÂ  Rabat</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2018</span>
-                        <h4>Premier partenariat NED</h4>
-                        <p>Grant NED 2018-0990 : Lancement des premiers projets de gouvernance dÃÂ©mocratique</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2019</span>
-                        <h4>Projet ÃÂ« Mon Droit au DÃÂ©veloppement ÃÂ»</h4>
-                        <p>Grant NED 2019-1306 : JournÃÂ©es d'ÃÂ©tude sur les droits ÃÂ©conomiques et sociaux avec le CNDH et la DIDH</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2019-2021</span>
-                        <h4>Protection de la vie privÃÂ©e</h4>
-                        <p>Partenariat FES + Adala : Guide pratique sur la protection de la vie privÃÂ©e</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2022</span>
-                        <h4>IA & Droits de l'Homme</h4>
-                        <p>Partenariat FES : Production de capsules vidÃÂ©o de sensibilisation sur l'Intelligence Artificielle</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2022-2023</span>
-                        <h4>ÃÂ­ÃÂÃÂ ÃÂÃÂ ÃÂ§ÃÂÃÂªÃÂÃÂÃÂÃÂ© (suite)</h4>
-                        <p>Grant NED 2022-0430 : StratÃÂ©gie de l'espace civique, consultations publiques, plaidoyer territorial</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2026</span>
-                        <h4>Plaidoyer Oued Laou & AECID</h4>
-                        <p>CommuniquÃÂ© sur les inondations, contact avec la CooperaciÃÂ³n EspaÃÂ±ola pour un nouveau projet</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="pr"><div class="c">
+<div class="st"><h2>Projets & Programmes</h2><p>Nos principales initiatives pour les droits humains</p><div class="ln"></div></div>
+<div class="g2">
+<div class="pj"><div class="ph"><h3><i class="fas fa-seedling"></i> Mon Droit au Developpement</h3><span>NED (2018-2023)</span></div><div class="pb"><p>Programme phare visant le droit au developpement dans les regions marginalisees, avec un focus sur la participation citoyenne et la gouvernance locale.</p><span class="tg">Developpement</span><span class="tg">Gouvernance</span></div></div>
+<div class="pj"><div class="ph"><h3><i class="fas fa-robot"></i> IA et Droits de l'Homme</h3><span>FES (2019-2022)</span></div><div class="pb"><p>Projet pionnier explorant l'impact de l'intelligence artificielle sur les droits humains au Maroc avec etudes et recommandations.</p><span class="tg">IA</span><span class="tg">Ethique numerique</span></div></div>
+<div class="pj"><div class="ph"><h3><i class="fas fa-shield-alt"></i> Protection de la Vie Privee</h3><span>FES</span></div><div class="pb"><p>Initiative dediee a la protection des donnees personnelles face aux defis du numerique et de la surveillance.</p><span class="tg">Vie privee</span><span class="tg">Donnees</span></div></div>
+<div class="pj"><div class="ph"><h3><i class="fas fa-mountain"></i> Intervention Oued Laou</h3><span>Tanger-Tetouan-Al Hoceima</span></div><div class="pb"><p>Actions de terrain dans la region d'Oued Laou : monitoring des droits, accompagnement des populations et plaidoyer regional.</p><span class="tg">Action locale</span><span class="tg">Monitoring</span></div></div>
+</div>
+</div></section>
 
-    <!-- CTA -->
-    <section class="section cta-section">
-        <div class="container">
-            <div class="cta-card">
-                <h2>Ensemble pour les droits humains</h2>
-                <p>Vous souhaitez collaborer avec l'IMDH ou soutenir nos actions ? Contactez-nous.</p>
-                <a href="contact.html" class="btn btn-white btn-lg">
-                    Prendre contact <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+<section id="ol"><div class="c">
+<div class="st"><h2>Section Oued Laou</h2><p>Notre presence dans la region Tanger-Tetouan-Al Hoceima</p><div class="ln"></div></div>
+<div class="g2">
+<div><p style="color:var(--t);margin-bottom:15px">La section d'Oued Laou represente l'ancrage territorial de l'IMDH dans le nord du Maroc, avec des actions de proximite au service des populations.</p>
+<ul class="ol">
+<li><i class="fas fa-check-circle"></i> Monitoring des droits economiques et sociaux</li>
+<li><i class="fas fa-check-circle"></i> Accompagnement des victimes de violations</li>
+<li><i class="fas fa-check-circle"></i> Sensibilisation et education aux droits</li>
+<li><i class="fas fa-check-circle"></i> Documentation des impacts environnementaux</li>
+<li><i class="fas fa-check-circle"></i> Plaidoyer pour le developpement regional</li>
+<li><i class="fas fa-check-circle"></i> Suivi post-catastrophes (seisme 2023)</li>
+</ul></div>
+<div class="mb"><i class="fas fa-map-marked-alt"></i><h3>Tanger-Tetouan-Al Hoceima</h3><p style="opacity:.9;font-size:.9rem">Region d'intervention prioritaire couvrant les zones rurales et communautes vulnerables du nord.</p></div>
+</div>
+</div></section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="assets/images/logo.svg" alt="IMDH Logo" class="footer-logo">
-                    <p class="footer-brand-ar">ÃÂ§ÃÂÃÂÃÂÃÂ¦ÃÂ© ÃÂ§ÃÂÃÂÃÂºÃÂ±ÃÂ¨ÃÂÃÂ© ÃÂÃÂ­ÃÂÃÂÃÂ ÃÂ§ÃÂÃÂ¥ÃÂÃÂ³ÃÂ§ÃÂ</p>
-                    <p>Instance Marocaine des Droits Humains</p>
-                    <p class="footer-tagline">DÃÂ©fendre, Promouvoir, ProtÃÂ©ger</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <a href="index.html">Accueil</a>
-                    <a href="about.html">Qui sommes-nous</a>
-                    <a href="projects.html">Projets</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Partenaires</h4>
-                    <a href="https://www.ned.org" target="_blank">NED</a>
-                    <a href="https://www.fes.de" target="_blank">Friedrich-Ebert-Stiftung</a>
-                    <a href="https://www.cndh.ma" target="_blank">CNDH</a>
-                    <a href="https://marruecos.aecid.es" target="_blank">AECID</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> instancemdh@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +212 537 708 624</p>
-                    <p><i class="fas fa-location-dot"></i> Rabat, Maroc</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 IMDH - Instance Marocaine des Droits Humains. Tous droits rÃÂ©servÃÂ©s.</p>
-            </div>
-        </div>
-    </footer>
+<section id="pl"><div class="c">
+<div class="st"><h2>Plaidoyer & Evaluation</h2><p>Actions d'influence et analyse des politiques</p><div class="ln"></div></div>
+<div class="g2">
+<div class="pi"><i class="fas fa-gavel"></i><div><h4>Reforme legislative</h4><p>Contributions aux reformes des lois, participation aux consultations et elaboration de memorandums.</p></div></div>
+<div class="pi"><i class="fas fa-globe"></i><div><h4>Mecanismes internationaux</h4><p>Participation au Conseil des Droits de l'Homme de l'ONU, rapports paralleles et procedures speciales.</p></div></div>
+<div class="pi"><i class="fas fa-chart-bar"></i><div><h4>Evaluation des politiques</h4><p>Analyses de l'impact des politiques publiques sur les droits, indicateurs et tableaux de bord.</p></div></div>
+<div class="pi"><i class="fas fa-handshake"></i><div><h4>Dialogue institutionnel</h4><p>Relations avec le Parlement, le CNDH et les collectivites pour promouvoir les droits humains.</p></div></div>
+</div>
+</div></section>
 
-    <script src="assets/js/main.js"></script>
+<section id="ed"><div class="c">
+<div class="st"><h2>Education & Sensibilisation</h2><p>Former et informer pour ancrer une culture des droits</p><div class="ln"></div></div>
+<div class="g3">
+<div class="cd" style="text-align:center"><i class="fas fa-chalkboard-teacher"></i><h3>Formations</h3><p>Sessions pour acteurs associatifs, jeunes et femmes sur les mecanismes de protection des droits.</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-users"></i><h3>Ateliers participatifs</h3><p>Reflexion et echange sur les enjeux des droits humains avec les communautes locales.</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-bullhorn"></i><h3>Campagnes</h3><p>Sensibilisation thematique sur les droits economiques, sociaux, culturels et environnementaux.</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-book"></i><h3>Ressources</h3><p>Guides, manuels et supports pedagogiques adaptes aux differents publics cibles.</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-laptop"></i><h3>Webinaires</h3><p>Conferences en ligne sur les themes emergents : IA, vie privee, changement climatique.</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-hands-helping"></i><h3>Renforcement</h3><p>Programmes de renforcement des capacites des organisations et defenseurs des droits.</p></div>
+</div>
+</div></section>
+
+<section id="mo"><div class="c">
+<div class="st"><h2>Monitoring des Crises</h2><p>Surveillance et documentation des urgences</p><div class="ln"></div></div>
+<div class="g2">
+<div><p style="color:var(--t);margin-bottom:12px">L'IMDH assure une veille sur les crises au Maroc, notamment les catastrophes naturelles et leurs impacts sur les droits.</p><p style="color:var(--t);margin-bottom:12px">Suite au seisme d'Al Haouz (septembre 2023), l'IMDH a mobilise ses equipes pour documenter les violations, accompagner les victimes et plaider pour une reconstruction respectueuse des droits.</p><p style="color:var(--t)">Notre approche combine collecte de donnees, analyse des reponses institutionnelles et recommandations pour la protection des populations.</p></div>
+<div class="mx"><h3><i class="fas fa-exclamation-triangle"></i> Interventions recentes</h3><ul>
+<li><i class="fas fa-angle-right"></i> Seisme d'Al Haouz - Sept. 2023</li>
+<li><i class="fas fa-angle-right"></i> Inondations dans le nord</li>
+<li><i class="fas fa-angle-right"></i> Impact COVID-19 sur les droits</li>
+<li><i class="fas fa-angle-right"></i> Monitoring post-catastrophe Oued Laou</li>
+<li><i class="fas fa-angle-right"></i> Documentation des deplacements</li>
+</ul></div>
+</div>
+</div></section>
+
+<section id="nu"><div class="c">
+<div class="st"><h2>IA & Droits Numeriques</h2><p>Protection des droits a l'ere numerique</p><div class="ln"></div></div>
+<div class="g2">
+<div><p style="color:var(--t);margin-bottom:12px">L'IMDH est pionniere au Maroc dans l'exploration des enjeux IA et droits humains. En partenariat avec la FES, nous menons des recherches sur l'impact des technologies emergentes.</p><p style="color:var(--t);margin-bottom:12px">Notre travail couvre la protection des donnees, la surveillance numerique, les biais algorithmiques et la vie privee dans un contexte de transformation digitale.</p><p style="color:var(--t)">Nous produisons des etudes, organisons des conferences et formulons des recommandations pour un cadre ethique adapte aux defis du numerique.</p></div>
+<div style="background:linear-gradient(135deg,#6c3483,#2980b9);border-radius:12px;padding:35px;color:#fff;text-align:center"><i class="fas fa-microchip" style="font-size:3.5rem;margin-bottom:15px"></i><h3 style="color:#fff;font-size:1.2rem">Technologies & Droits</h3><p style="margin-top:12px;opacity:.9;font-size:.9rem">Recherche, plaidoyer et sensibilisation pour une IA responsable et respectueuse des droits fondamentaux.</p></div>
+</div>
+</div></section>
+
+<section id="pu"><div class="c">
+<div class="st"><h2>Publications & Rapports</h2><p>Nos contributions a la reflexion</p><div class="ln"></div></div>
+<div class="pu">
+<div class="cd"><i class="fas fa-file-pdf" style="color:var(--s)"></i><div><h4>Capitalisation 2011-2025</h4><p>Bilan de 14 ans d'action pour les droits humains au Maroc.</p></div></div>
+<div class="cd"><i class="fas fa-file-pdf" style="color:var(--s)"></i><div><h4>IA et Droits de l'Homme</h4><p>Impact de l'intelligence artificielle sur les droits fondamentaux.</p></div></div>
+<div class="cd"><i class="fas fa-file-pdf" style="color:var(--s)"></i><div><h4>Vie Privee Numerique</h4><p>Cadre juridique de protection des donnees personnelles.</p></div></div>
+<div class="cd"><i class="fas fa-file-pdf" style="color:var(--s)"></i><div><h4>Mon Droit au Developpement</h4><p>Droits economiques et sociaux dans les regions marginalisees.</p></div></div>
+<div class="cd"><i class="fas fa-file-pdf" style="color:var(--s)"></i><div><h4>Seisme d'Al Haouz</h4><p>Impacts sur les droits humains et recommandations.</p></div></div>
+</div>
+</div></section>
+
+<section id="pt"><div class="c">
+<div class="st"><h2>Nos Partenaires</h2><p>Un reseau national et international</p><div class="ln"></div></div>
+<div class="g4">
+<div class="cd" style="text-align:center"><i class="fas fa-landmark"></i><h3>NED</h3><p>National Endowment for Democracy (2018-2023)</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-university"></i><h3>FES</h3><p>Fondation Friedrich Ebert (2019-2022)</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-globe-europe"></i><h3>AECID</h3><p>Agence Espagnole de Cooperation</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-hands-helping"></i><h3>Societe Civile</h3><p>Reseau d'associations marocaines</p></div>
+</div>
+</div></section>
+
+<section id="gv"><div class="c">
+<div class="st"><h2>Gouvernance</h2><p>Une organisation transparente et democratique</p><div class="ln"></div></div>
+<div class="g3">
+<div class="cd" style="text-align:center"><i class="fas fa-sitemap"></i><h3>Bureau executif</h3><p>Organe de direction charge de la gestion strategique et operationnelle.</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-users-cog"></i><h3>Assemblee generale</h3><p>Instance supreme reunissant les membres pour definir les orientations.</p></div>
+<div class="cd" style="text-align:center"><i class="fas fa-map-marker-alt"></i><h3>Sections regionales</h3><p>Presences locales assurant l'ancrage dans les differentes regions.</p></div>
+</div>
+</div></section>
+
+<section id="ch"><div class="c">
+<div class="st"><h2>Notre Parcours</h2><p>Etapes cles depuis la creation</p><div class="ln"></div></div>
+<div class="tl">
+<div class="ti"><div class="td"></div><div class="tc"><strong>2011 - Fondation</strong><p>Creation de l'IMDH dans le contexte du Printemps arabe.</p></div></div>
+<div class="ti"><div class="td"></div><div class="tc"><strong>2018 - Partenariat NED</strong><p>Lancement de "Mon Droit au Developpement" avec le NED.</p></div></div>
+<div class="ti"><div class="td"></div><div class="tc"><strong>2019 - Projet IA</strong><p>Partenariat FES sur l'IA et les droits humains.</p></div></div>
+<div class="ti"><div class="td"></div><div class="tc"><strong>2023 - Seisme Al Haouz</strong><p>Mobilisation pour documenter l'impact et accompagner les victimes.</p></div></div>
+<div class="ti"><div class="td"></div><div class="tc"><strong>2025 - Capitalisation</strong><p>Publication du rapport bilan de 14 ans d'action.</p></div></div>
+</div>
+</div></section>
+
+<section id="tm"><div class="c">
+<div class="st"><h2>Temoignages</h2><p>L'impact sur le terrain</p><div class="ln"></div></div>
+<div class="g3">
+<div class="cd" style="text-align:center"><i class="fas fa-quote-left" style="color:var(--a)"></i><p style="font-style:italic;margin:12px 0">"L'IMDH nous a permis de comprendre nos droits. Leur presence a Oued Laou a change la donne."</p><strong style="color:var(--p);font-size:.85rem">- Habitant d'Oued Laou</strong></div>
+<div class="cd" style="text-align:center"><i class="fas fa-quote-left" style="color:var(--a)"></i><p style="font-style:italic;margin:12px 0">"Le travail sur l'IA et les droits est pionnier. Leurs recommandations eclairent le debat."</p><strong style="color:var(--p);font-size:.85rem">- Partenaire institutionnel</strong></div>
+<div class="cd" style="text-align:center"><i class="fas fa-quote-left" style="color:var(--a)"></i><p style="font-style:italic;margin:12px 0">"Les formations m'ont donne les outils pour defendre les droits de ma communaute."</p><strong style="color:var(--p);font-size:.85rem">- Participant aux formations</strong></div>
+</div>
+</div></section>
+
+<section id="ac"><div class="c">
+<div class="st"><h2>Actualites</h2><p>Les dernieres nouvelles</p><div class="ln"></div></div>
+<div class="g3">
+<div class="ax"><div class="an">Mars 2025</div><h3>Rapport de capitalisation</h3><p>Publication du bilan couvrant 14 ans d'action au Maroc.</p></div>
+<div class="ax"><div class="an">2024</div><h3>Suivi post-seisme</h3><p>Monitoring et accompagnement des populations affectees.</p></div>
+<div class="ax"><div class="an">2023</div><h3>Reponse d'urgence</h3><p>Mobilisation pour les droits des victimes du seisme.</p></div>
+</div>
+</div></section>
+
+<section id="ct"><div class="c">
+<div class="st"><h2>Contact</h2><p>Joignez-nous pour toute question</p><div class="ln"></div></div>
+<div class="g2">
+<div>
+<div class="ci"><i class="fas fa-envelope"></i><div><strong>Email</strong><p style="color:var(--t)">contact@imdh.ma</p></div></div>
+<div class="ci"><i class="fas fa-map-marker-alt"></i><div><strong>Adresse</strong><p style="color:var(--t)">Maroc</p></div></div>
+<div class="ci"><i class="fas fa-globe"></i><div><strong>Site</strong><p style="color:var(--t)">www.imdh.ma</p></div></div>
+<div class="ci"><i class="fas fa-phone"></i><div><strong>Telephone</strong><p style="color:var(--t)">Disponible sur demande</p></div></div>
+<div class="so" style="margin-top:10px"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+</div>
+<form class="cf" onsubmit="event.preventDefault();alert('Merci!')">
+<input type="text" placeholder="Votre nom" required>
+<input type="email" placeholder="Votre email" required>
+<input type="text" placeholder="Sujet">
+<textarea placeholder="Votre message" required></textarea>
+<button type="submit" class="bs">Envoyer</button>
+</form>
+</div>
+</div></section>
+
+<section class="ms" id="mb"><div class="c">
+<div class="st"><h2>Espace Membres</h2><p style="color:rgba(255,255,255,.7)">Acces reserve aux membres</p><div class="ln" style="background:var(--a)"></div></div>
+<div class="lb">
+<div style="margin-bottom:15px"><i class="fas fa-user-shield" style="font-size:2rem;color:var(--a)"></i></div>
+<input type="text" placeholder="Identifiant">
+<input type="password" placeholder="Mot de passe">
+<button class="bl" onclick="alert('Bientot disponible')">Se connecter</button>
+<p style="margin-top:12px;font-size:.75rem;opacity:.5">En cours de developpement</p>
+</div>
+</div></section>
+
+<footer><div class="c">
+<div class="fg">
+<div><h4>IMDH</h4><p>Instance Marocaine des Droits Humains. ONG dediee a la defense des droits humains au Maroc depuis 2011.</p><div class="so"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+<div><h4>Navigation</h4><a href="#a">A propos</a><a href="#x">Axes</a><a href="#pr">Projets</a><a href="#pu">Publications</a></div>
+<div><h4>Sections</h4><a href="#ol">Oued Laou</a><a href="#pl">Plaidoyer</a><a href="#ed">Education</a><a href="#mo">Monitoring</a></div>
+<div><h4>Contact</h4><a href="mailto:contact@imdh.ma">contact@imdh.ma</a><a href="#ct">Formulaire</a><a href="#mb">Espace Membres</a></div>
+</div>
+<div class="fb">&copy; 2025 IMDH - Tous droits reserves.</div>
+</div></footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth'});document.getElementById('nm').classList.remove('on')}})});
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.boxShadow=scrollY>50?'0 2px 25px rgba(0,0,0,.12)':'0 2px 15px rgba(0,0,0,.08)'});
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity='1';x.target.style.transform='translateY(0)'}})},{threshold:.1});
+document.querySelectorAll('.cd,.ax,.pj,.pi,.ti').forEach(e=>{e.style.opacity='0';e.style.transform='translateY(20px)';e.style.transition='opacity .5s,transform .5s';io.observe(e)});
+</script>
 </body>
 </html>
